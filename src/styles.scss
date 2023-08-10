@@ -283,12 +283,17 @@ p.park {
 
 // media quieries
 
-@media screen and (max-width: 900px) and (min-width: 600px), (min-width: 1100px) {
-  #ilyeMod {
-    color: black;
-  }
-  #modalBtn{
-    margin-left: 155px;
+// @media screen and (max-width: 900px) and (min-width: 600px), (max-width: 1100px) {
+//   #ilyeMod {
+//     color: black;
+//   }
+//   #modalBtn{
+//     margin-left: 155px;
+//   }
+// }
+@media screen and (min-width: 775px){
+  .logo {
+    margin-left: 250px;
   }
 }
 @media screen and (max-width: 775px) {
@@ -301,7 +306,7 @@ p.park {
   background-size:cover;
   }  
   .wrapper { 
-    margin: 0 auto;
+    // margin: 0 auto;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -341,17 +346,17 @@ p.park {
 @media screen and (max-width: 375px) {
 
 ul.bottomMenu {
-    margin-top: 285px;
+    // margin-top: 285px;
 }
 ul.front-pg {
-  margin-left: 6px;
+  // margin-left: 6px;
   } 
 }
 @media screen and (max-width: 321px) {
   ul.bottomMenu {
-      margin-top: 285px;
+      // margin-top: 285px;
   }
   ul.front-pg {
-    margin-left: 6px;
+    // margin-left: 6px;
   } 
 }
