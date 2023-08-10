@@ -11,19 +11,22 @@ body {
   background-color: #288d64;
   background-size:cover;
   min-width: 100%;
-  // max-width: 1200px;
   margin: 0 auto;
   // height: 100vh;
+  .wrapper { 
+    // margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height:auto;
+    width: 100vw;
+  }
 }
 .grid-item.pull-left {
-  // margin-right: 130px;
   color: green;
   font-size: 1em;
   text-transform: uppercase;
   line-height: 2;
-}
-header {
-  margin-top: 25%;;
 }
 img.image.high-quality {
   margin-left: 100px;
@@ -34,6 +37,21 @@ img.image.high-quality {
 #globe-1 {
   margin-left: 0px;
 }
+
+// sign-up page styles inside modal
+
+input#username, 
+input#password {
+    background-color: #008a0e;
+    color: white!important;
+}
+button#sUp {
+  margin-left: 150px;
+  margin-top: 4rem;
+}
+
+// end sign-up page styles inside modal
+
 ul.front-pg li.frt-pg {
   display:flex;
   flex-flow: nowrap;
@@ -50,14 +68,6 @@ button.btn.btn-primary {
   border-radius: 10px;
   border: 1px solid #008a0e;
 }
-// button.btn.btn-secondary {
-//   background-color: #008a0e;
-//   width: 30%;
-//   padding: 20px 1px;
-//   border-radius: 20px;
-//   border: 1px solid #008a0e;
-// }
-
 button.btn.btn-primary:hover {
   background-color: #008a0e;
   color: white;
@@ -94,19 +104,7 @@ a {
   padding: 0.5em;
   box-sizing: border-box;
   background-clip: content-box;
-  // border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.col-md-6.colLogin {
-  margin-left: 34px;
-  // margin-right: 20px;
-}
-// .card-body.wBkgrd{
-//   background-image: url("https://assets.codepen.io/460875/main-bkgrd.png");
-//   background-repeat: no-repeat;
-//   background-size: 100% 100%;
-//   border: none;
-//   height: 100vh;
-// }
 /* nested grids */
 .row .row,
 .row.nested {
@@ -173,8 +171,10 @@ a {
   background-color: rgba(255, 0, 0, 0.1) !important;
 }
 
-h2 {
+h2.gettinVees {
   font-family: 'Orbitron', sans-serif;
+  color: white;
+  text-align: center;
 }
 .topBar {
   display: grid;
@@ -216,14 +216,7 @@ border-radius: 10px;
 padding: 10px 5px;
 background-color: #008a0e;
 color: white !important;
-}
-.wrapper{
-  //  padding-bottom: 2.5rem;
-    margin-right: 4px;
-}
-main {
-  position: relative;
-  min-height: 100vh;
+max-width: 50%;
 }
 .mTop {
   margin-top: 10px;
@@ -311,6 +304,7 @@ p.park {
     align-items: center;
     justify-content: space-around;
     height:auto;
+    width: 100vw;
   }
   button.btn.btn-primary {
     width: 50%;

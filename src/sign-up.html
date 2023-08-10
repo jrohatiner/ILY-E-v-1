@@ -18,87 +18,14 @@
   </head>
 
   <style>
-    #email,
-    #username,
-    #password,
-    #confirmPassword {
-      color: black;
-    }
-#loader {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: 1;
-  /* width: 120px; */
-  /* height: 120px; */
-  margin: -76px 0 0 -76px;
-  /* border: 16px solid #f3f3f3; */
-  border-radius: 50%;
-  /* border-top: 16px solid #3498db; */
-  -webkit-animation: spin 3s linear infinite;
-  animation: spin 3s linear infinite;
-}
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-/* Add animation to "page content" */
-.animate-bottom {
-  position: relative;
-  -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 1s;
-  animation-name: animatebottom;
-  animation-duration: 1s
-}
-@-webkit-keyframes animatebottom {
-  from { bottom:-100px; opacity:0 } 
-  to { bottom:0px; opacity:1 }
-}
-
-@keyframes animatebottom { 
-  from{ bottom:-100px; opacity:0 } 
-  to{ bottom:0; opacity:1 }
-}
-#myDiv {
-  display: none;
-  text-align: center;
-}
-button {
-      margin-left: 150px;
-    }
- /* .loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: transparent;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  padding: 20px;
-}
-#globe img {
-  width: 100px;
-  height: 100px;
-} */
   </style>
 
 <body>
-
-  <div id="loader"><img class="image high-quality" id="globe" src="https://assets.codepen.io/460875/globe.png" alt="globe" width="300" height="300" />
-  </div>
-    
-    <!-- <div class="loader" id="loader"><img class="image high-quality" id="globe" src="https://assets.codepen.io/460875/globe.png" alt="globe" width="300" height="300" />
-    </div> -->
-    
-  
+    <div class="wrapper">
   <!-- Button to trigger the modal -->
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ilyeMod">
+  <button type="button" class="btn btn-primary" id="sUp" data-bs-toggle="modal" data-bs-target="#ilyeMod">
     Sign Up
   </button>
-  </div>
   <!-- Modal -->
   <div class="modal fade" id="ilyeMod" tabindex="-1" aria-labelledby="ilyeModLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -126,7 +53,6 @@ button {
             <label for="confirmPassword" class="form-label">Confirm Password</label>
             <input type="password" class="form-control" id="confirmPassword" required>
           </div>
-          <!-- <button type="submit" class="btn btn-primary">Sign Up</button> -->
         </form>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -136,32 +62,26 @@ button {
     </div>
   </div>
     <!-- END MODAL CODE -->
-    <footer>
-      <div class="col col-span-12">
       <div class="row">
-       
+      <div class="col col-span-12">
             <!-- to be removed -->
           <ul class="bottomMenu">
+            <li><a href="index.html">home</a></li>
             <li><a href="login.html">login</a></li>
-            <li><a href="sign-up.html">sign-up</a></li>
-            <li><a href="globe.html">globe</a></li>
             <li><a href="faceSuccess.html">facial Recognition</a></li>
             <li><a href="parking.html">Parking</a></li>
             <li><a href="loadVehicles.html">Loading Vehicles</a></li>
             <li><a href="vehicles.html">Loaded Vehicles</a></li>
-            <li><a href="sign-up.html">SignUp Modal</a></li>
             <li><a href="energy.html">energy</a></li>
             <li><a href="express.html">express</a></li>
             <li><a href="test.html">test</a></li>
           </ul>
             <!-- end menu remove -->
           <p class="footText footRow">
-        By proceeding you agree to ILY-E <a class="footLinks" href="#">terms of use</a> and our <a class="footLinks" href="#">privacy policy</a>
-        </p></div>
+        By proceeding you agree to ILY-E <a class="footLinks" href="#">terms of use</a> and our <a class="footLinks" href="#">privacy policy</a></p>
       </div>
-    </footer>
-
-<!-- </div> -->
+      </div>
+    </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 

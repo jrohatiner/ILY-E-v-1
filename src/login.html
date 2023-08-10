@@ -14,12 +14,12 @@
 </head>
 
 <body>
+  <div class="wrapper">
   <div class="grid-row row center">
-    <header>
       <div class="topBar">
-        <div class="grid-item"><div class="logo">
+        <div class="grid-item">
+          <div class="logo">
           <img class="image high-quality" src="https://assets.codepen.io/460875/logo_1.png" alt="logo" width="70%" height="10%">
-          
           </div>
         </div>
       
@@ -32,35 +32,25 @@
         </div>
       </div>
       </div>
-    </header>
-
-  <main>
-  <div class="wrapper">
 
  <div class="row justify-content-center">
-  <div class="col-md-6 colLogin">
-    <div class="card loginCard">
-      <div class="card-body wBkgrd">
-        <form action="">
-          <div class="mb-3">
-            <input type="text" class="form-control" id="username" placeholder="username">
-          </div>
-          <div class="mb-3">
-            <input type="password" class="form-control" id="password" placeholder="password">
-          </div>
+        <form action="loadVehicles.html">
           <div class="text-center">
-            <button type="submit" class="btn btn-primary">Login</button><br>
-            <button class="btn btn-primary mTop scanner">Sign up</button><br>
-            <span class="fScan"><a class="scanTrans" href="faceSuccess.html"><i class="fa-sharp fa-light fa-face-viewfinder fa-2xl"></i></a>
+          <div class="mb-3">
+            <input type="text" class="form-control btn btn-primary" id="username" placeholder="username">
+          </div>
+          <div class="mb-3">
+            <input type="password" class="form-control btn btn-primary" id="password" placeholder="password">
+          </div>
+          <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Sign in</button>
+          </div>
+            <div class="mb-3">
+            <span class="fScan"><a class="scanTrans" href="loadVehicles.html"><i class="fa-sharp fa-light fa-face-viewfinder fa-2xl"></i></a>
           </span>
         </div>
-        </form>
       </div>
-    </div>
-  </div>
-</div>
-</div>
-</main>
+        </form>
 </div>
  <div class="row">
 <div class="col col-span-12">
@@ -68,7 +58,6 @@
   <ul class="bottomMenu">
     <li><a href="index.html">home</a></li>
     <li><a href="sign-up.html">sign-up</a></li>
-    <li><a href="globe.html">globe</a></li>
     <li><a href="faceSuccess.html">facial Recognition</a></li>
     <li><a href="parking.html">Parking</a></li>
     <li><a href="loadVehicles.html">Loading Vehicles</a></li>
@@ -80,7 +69,8 @@
   <!-- end menu remove -->
   <p class="footText footRow">
 By proceeding you agree to ILY-E <a class="footLinks" href="#">terms of use</a> and our <a class="footLinks" href="#">privacy policy</a>
-</p></div>
+</p>
+</div>
 </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
