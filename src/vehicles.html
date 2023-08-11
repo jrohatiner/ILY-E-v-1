@@ -9,13 +9,24 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
 <script src="https://kit.fontawesome.com/4500d8ef13.js" crossorigin="anonymous"></script>
   <script src="main.js"></script>
 </head>
 
+<style>
+body.mapLoads {
+background: transparent;
+}
+</style>
 <body class="mapLoads">
+
   <div class="wrapper">
-  <div class="grid-row row center">
+
+  <div id="map"></div>
+
+  <!-- <div class="grid-row row center">
         <div class="topBar">
           <div class="grid-item"><div class="logo">
             <img class="image high-quality" src="https://assets.codepen.io/460875/logo_1.png" alt="logo" width="70%" height="10%">
@@ -30,10 +41,12 @@
             </ul>
           </div>
         </div>
-    </div>
+    </div> -->
+
       <div class="col center col-span-4">4
          <p>Map background here</p>
          </div>
+
  <div class="row">
 <div class="col col-span-12">
     <!-- to be removed -->
