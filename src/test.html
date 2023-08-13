@@ -13,58 +13,42 @@
   <script src="main.js"></script>
 </head>
 <style>
-  body {
-    height: 100vh;
-    margin: 0 auto;
-}
-.topBar {
-    grid-template-columns: auto auto;
-}
-  .logo {
-    margin-top: 20px;
-}
-ul.front-pg {
-   margin-left: -43px;
+  .flex-grow-1.ms-3.top {
+    margin-top: 75px;
 }
 </style>
 <body>
  <div class="wrapper">
-<div class="grid-row row justify-content-center" >
-     <!-- <header> -->
-      <!-- <div class="col col-span-8"> -->
-        <div class="topBar">
-          <!-- <div class="grid-item"> -->
-            <div class="logo">
-            <img class="image high-quality" src="https://assets.codepen.io/460875/logo_1.png" alt="logo" width="100" height="100">
-            
-          <!-- </div> -->
-          </div>
-        
-          <div class="grid-item pull-left"> 
-            <ul class="front-pg">
-              <li class="frt-pg"><a href="vehicles.html">vehicles</a></li>
-              <li class="frt-pg"><a href="energy.html">energy</a></li>
-              <li class="frt-pg"><a href="express.html">express</a></li>
-            </ul>
-          </div>
-        </div>
-      
-      <!-- </header> -->
-    <div class="frt-btn">
-      <div class="col center col-span-4" style="position:relative;">
-         <p><button class="btn btn-primary">
-         <a href="login.html" style="color:white;">Login</a>
-       </button></p>
-         <!-- </div> -->
-      <!-- <div class="col center col-span-4"> -->
-         <p><button class="btn btn-primary">
-          <a href="sign-up.html" style="color:white;">Sign up</a>
-       </button></p>
-         </div>
-        </div>
+<!-- <div class="grid-row row justify-content-center" > -->
+
+<div class="d-flex align-items-center">
+<div class="flex-shrink-0">
+  <img class="image high-quality" src="https://assets.codepen.io/460875/logo_1.png" alt="logo" width="100" height="100">
 </div>
+<div class="flex-grow-1 ms-3 top">
+    <ul class="list-group-flush front-pg">
+<li class="list-group-item frt-pg"><a href="vehicles.html">VEHICLES</a></li>
+<li class="list-group-item frt-pg"><a href="energy.html">ENERGY</a></li>
+<li class="list-group-item frt-pg"><a href="express.html">EXPRESS</a></li>
+</ul>
+    <!-- <div class="frt-btn"> -->
+    <!-- <div class="col center col-span-4" style=""> -->
+       <p><button class="btn btn-primary">
+       <a href="login.html" style="color:white;">Login</a>
+     </button></p>
+      
+       <p><button class="btn btn-primary">
+        <a href="sign-up.html" style="color:white;">Sign up</a>
+     </button></p>
+       </div> 
+      </div>
+
          <div class="row">
-        <!-- <div class="col col-span-12"> -->
+        <div class="col col-span-8">
+        <p class="footText footRow" style="color:white;">
+        By proceeding you agree to ILY-E <a class="footLinks" href="#">terms of use</a> and our <a class="footLinks" href="#">privacy policy</a>
+        </p>
+       <!-- </div> -->
         <!-- to be removed -->
         <ul class="bottomMenu">
           <li><a href="login.html">login</a></li>
@@ -80,12 +64,10 @@ ul.front-pg {
           <li><a href="test.html">test</a></li>
         </ul>
           <!-- end menu remove -->
-          <p class="footText footRow">
-            By proceeding you agree to ILY-E <a class="footLinks" href="#">terms of use</a> and our <a class="footLinks" href="#">privacy policy</a>
-            </p>
- </div>      
+        </div>
+  </div> 
 </div>
-    </div>
+  </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.min.js"></script>
 
