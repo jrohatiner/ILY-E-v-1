@@ -12,24 +12,30 @@ body {
   background-size:cover;
   min-width: 100%;
   margin: 0 auto;
-  // height: 100vh;
+  height: 100vh;
+}
   .wrapper { 
     // margin: 0 auto;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    height:auto;
-    width: 100vw;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: space-around;
+    // height:100vh;
+    // width: 100vw;
   }
-}
 .grid-item.pull-left {
   color: green;
   font-size: 1em;
   text-transform: uppercase;
-  line-height: 2;
+  // line-height: 2;
+}
+.d-flex {
+  margin-top: 4.25em;
+}
+.faceScan {
+  text-align: center;
 }
 img.image.high-quality {
-  margin-left: 100px;
+  margin-left: 65px;
 }
 #globe {
   margin-left: 0px;
@@ -84,7 +90,6 @@ button.btn.btn-secondary:hover {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  // width: 30%;
   padding: 20px 1px;
   border: 1 px solid #6f7681;
 }
@@ -92,6 +97,50 @@ a {
   text-decoration: none;
   color: white;
 }
+
+// loader animation styles
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  margin: -76px 0 0 -76px;
+  border-radius: 50%;
+  -webkit-animation: spin 3s linear infinite;
+  animation: spin 3s linear infinite;
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+/* MUST FIX FOR JS TO WORK - SEE LOADERjs for change ID */
+#myDiv {
+  display: none;
+  text-align: center;
+}
+// end loader animation styles
+
 .row {
   margin-top: 0.5rem;
   display: flex;
@@ -120,7 +169,7 @@ a {
 }
 /* center grids */
 .row.center {
-  justify-content: center;
+  // justify-content: center;
 }
 .center .col {
   flex-grow: 0;
@@ -253,19 +302,11 @@ a.scanTrans {
   background-size: 100% 100%;
   border: none;  
 }
-// footer {
-// position: relative;
-// bottom: 0;
-// width: 100%;
-// height: 2.5rem;
-// font-size: x-small ;
-// word-break: keep-all;
-// }
 ul.bottomMenu {
 position: relative;
 bottom: 0;
 width: 100%;
-height: 100vh;
+// height: 100vh;
 font-size: x-small ;
 word-break: keep-all;
 }
@@ -273,10 +314,10 @@ word-break: keep-all;
   text-align:center
 }
 a.footLinks {
-  color: black;
+  color: #008a0e;
 }
 a.footLinks:hover {
-  color: #008a0e;
+  color: white;
 }
 li a {
   color: white;
@@ -290,47 +331,33 @@ p.park {
 
 // media quieries
 
-// @media screen and (max-width: 900px) and (min-width: 600px), (max-width: 1100px) {
-//   #ilyeMod {
-//     color: black;
-//   }
-//   #modalBtn{
-//     margin-left: 155px;
+// @media screen and (max-width: 992px) {
+//   .topBar{
+//     margin-left: 300px;
+//     padding: 10px 45px;
 //   }
 // }
-@media screen and (min-width: 775px){
-  .logo {
-    margin-left: 250px;
+// @media screen and (max-width: 768px) {
+//   .topBar{
+//     margin-left: 175px;
+//     padding: 10px 45px;
+//   }
+// }
+// @media screen and (max-width: 575px){
+//   .topBar {
+//     margin-right: 100px;
+//     padding: 10px 45px;
+//   }
+// }
+@media screen and (max-width: 325px){
+  .topBar {
+    // margin-left: 140px;
+    // padding: 10px 45px;
   }
 }
-@media screen and (max-width: 775px) {
-  body {
-  min-height: 100vh;
-  font-family: 'Orbitron', sans-serif;
-  background-image: url("https://assets.codepen.io/460875/main-bkgrd.png");
-  background-repeat: no-repeat;  
-  background-color: #288d64;
-  background-size:cover;
-  }  
-  .wrapper { 
-    // margin: 0 auto;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    height:auto;
-    width: 100vw;
-  }
-  button.btn.btn-primary {
-    width: 50%;
-  }
-  ul.bottomMenu {
-    margin-top: 221px;
-}
-  .grid-item {
-    text-align: center;
-    // padding: 1px;
-    }
-}
+// @media screen and (max-width: 775px) {
+// }
+
 @media all and (max-width: 576px) {
   .col-span-1,
   .col-span-2,
@@ -351,20 +378,17 @@ p.park {
      flex-basis: 100%;
   }
 }
-@media screen and (max-width: 375px) {
+// @media screen and (max-width: 375px) {
 
-ul.bottomMenu {
-    // margin-top: 285px;
-}
-ul.front-pg {
-  // margin-left: 6px;
-  } 
-}
-@media screen and (max-width: 321px) {
-  ul.bottomMenu {
-      // margin-top: 285px;
-  }
-  ul.front-pg {
-    // margin-left: 6px;
-  } 
-}
+// ul.bottomMenu {
+//     // margin-top: 285px;
+// }
+// ul.front-pg {
+//   // margin-left: 6px;
+//   } 
+// }
+@media screen and (max-width: 375px) {
+  .logo {
+    // margin-left: 90px;
+   }
+ }
