@@ -1,155 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>ILY-e</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/4500d8ef13.js"
-      crossorigin="anonymous"
-    ></script>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Attach a popup to a marker instance</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mapbox-gl-animated-popup@v0.4.0/dist/mapbox-gl-animated-popup.min.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet" />
+<style>
+  body { margin: 0; padding: 0; }
+  #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+</style>
+</head>
+<body>
+<style>
+    #marker {
+        background-image: url('https://assets.codepen.io/460875/tesla-model-3.png');
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        border-radius: ;
+        cursor: pointer;
+    }
 
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
-    <link
-      href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/mapbox-gl-animated-popup@latest/dist/mapbox-gl-animated-popup.min.js"></script>
-  </head>
-  <body>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-      }
-      #map {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 100%;
-      }
-
-      .mapboxgl-popup {
-        width: 400px;
-        height: 600px;
-        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-      }
-    </style>
+    .mapboxgl-popup {
+        max-width: 500px;
+    }
+</style>
     <div id="map"></div>
     <script>
-      mapboxgl.accessToken = 'pk.eyJ1IjoiYWNoaWNrYW5kYWNsaWNrIiwiYSI6ImNsbDZwenYxZTAxNnMzY3ByZTRxdjN5amgifQ.TM9PSKFurgbnXKB9S7zzlA';
-
-const map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v12',
-    center: [-77.04, 38.907],
-    zoom: 2.15,
-    projection: 'globe'
-});
-
-map.on('load', () => {
-    map.addSource('places', {
-        'type': 'geojson',
-        'data': {
-            'type': 'FeatureCollection',
-            'features': [
-                // ... your features here
-                {
-                    type: 'Feature',
-                    id: 4174053671,
-                    geometry: {
-                        type: 'Point',
-                        coordinates: [-122.42901, 37.80633],
-                    },
-                    properties: {
-                        class: 'national_park',
-                        type: 'national_park',
-                        tilequery: {
-                            distance: 0,
-                            geometry: 'polygon',
-                            layer: 'landuse_overlay',
-                        },
-                    },
-                },
-                {
-                    type: 'Feature',
-                    id: 822070541,
-                    geometry: {
-                        type: 'Point',
-                        coordinates: [-122.4289919435978, 37.806283149631255],
-                    },
-                    properties: {
-                        localrank: 1,
-                        maki: 'park',
-                        name: 'Fort Mason',
-                        // ... other properties here
-                        tilequery: {
-                            distance: 5.4376397785894595,
-                            geometry: 'point',
-                            layer: 'poi_label',
-                        },
-                    },
-                },
-            ],
-        },
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYWNoaWNrYW5kYWNsaWNrIiwiYSI6ImNsbDZwdXB1eTAxNWUzZWtkNWQzcXl6c2YifQ.O-SS3JrdGgWYPr2jtOXVrg';
+    var monument = [-77.0353, 38.8895];
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/light-v10',
+        center: monument,
+        projection: 'globe',
+        zoom: 15
     });
 
-    map.addLayer({
-        'id': 'places',
-        'type': 'symbol',
-        'source': 'places',
-        'layout': {
-            'icon-image': ['get', 'icon'],
-            'icon-allow-overlap': true
-        }
-    });
-
-    map.on('click', 'places', (e) => {
-        const coordinates = e.features[0].geometry.coordinates.slice();
-        const description = e.features[0].properties.description;
-
-        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-        }
-
-        new mapboxgl.Popup()
-            .setLngLat(coordinates)
-            .setHTML(description)
-            .addTo(map);
-    });
-
-    map.on('mouseenter', 'places', () => {
-        map.getCanvas().style.cursor = 'pointer';
-    });
-
-    map.on('mouseleave', 'places', () => {
-        map.getCanvas().style.cursor = '';
-    });
-
-    map.addSource('mapbox-dem', {
-        "type": "raster-dem",
-        "url": "mapbox://mapbox.mapbox-terrain-dem-v1",
-        "tileSize": 512,
-        "maxzoom": 14
-    });
-
-    map.setTerrain({
-        "source": "mapbox-dem",
-        "exaggeration": 2
-    });
-
+    // create the popup
     var popup = new AnimatedPopup({
+        offset: 25,
         openingAnimation: {
             duration: 1000,
             easing: 'easeOutElastic',
@@ -160,14 +52,20 @@ map.on('load', () => {
             easing: 'easeInBack',
             transform: 'scale'
         }
-    }).setLngLat([-96, 37.8]).setHTML('Hello World!').addTo(map);
-});
+    }).setText(
+        'Reserve Lorem Ipsum Reserve Lorem Ipsum Reserve Lorem Ipsum Reserve Lorem Ipsum Reserve Lorem Ipsum Reserve Lorem Ipsum Reserve Lorem Ipsum Reserve Lorem Ipsum Reserve Lorem Ipsum Reserve Lorem Ipsum Reserve Lorem Ipsum'
+    );
 
-map.setPaintProperty('places', 'fill-opacity-transition', {
-    "duration": 300,
-    "delay": 0
-});
+    // create DOM element for the marker
+    var el = document.createElement('div');
+    el.id = 'marker';
 
-    </script>
+    // create the marker
+    new mapboxgl.Marker(el)
+        .setLngLat(monument)
+        .setPopup(popup) // sets a popup on this marker
+        .addTo(map);
+</script>
+
   </body>
 </html>

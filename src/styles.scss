@@ -76,15 +76,15 @@ button.btn.btn-primary:hover {
   padding: 5px 3px;
   border: 1 px solid #008a0e;
 }
-button.btn.btn-secondary:hover {
-  background-color: #6f7681;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  padding: 20px 1px;
-  border: 1 px solid #6f7681;
-}
+// button.btn.btn-secondary:hover {
+//   background-color: #6f7681;
+//   color: white;
+//   text-align: center;
+//   text-decoration: none;
+//   display: inline-block;
+//   padding: 20px 1px;
+//   border: 1 px solid #6f7681;
+// }
 a {
   text-decoration: none;
   color: white;
@@ -125,12 +125,6 @@ a {
   from{ bottom:-100px; opacity:0 } 
   to{ bottom:0; opacity:1 }
 }
-
-/* MUST FIX FOR JS TO WORK - SEE LOADERjs for change ID */
-#myDiv {
-  display: none;
-  text-align: center;
-}
 // end loader animation styles
 
 .row {
@@ -154,14 +148,12 @@ a {
 }
 /* full width grids */
 .row.wide-fit {
-  /*margin-left: 10px;
- margin-right: 10px;*/
   margin: -10px;
   padding: 5px 10px 5px;
 }
 /* center grids */
 .row.center {
-  // justify-content: center;
+  justify-content: center;
 }
 .center .col {
   flex-grow: 0;
@@ -334,16 +326,19 @@ p.park {
 //     padding: 10px 45px;
 //   }
 // }
-@media screen and (max-width: 325px){
-  .topBar {
-    // margin-left: 140px;
-    // padding: 10px 45px;
+@media screen and (max-width: 992px) {
+  .grid-item {
+    text-align: center;
+    padding: 15px;
   }
 }
-// @media screen and (max-width: 775px) {
-// }
+@media screen and (max-width: 775px) {
+  .grid-item {
+    // margin-left: -100px;
+  }
+}
 
-@media all and (max-width: 576px) {
+@media all and (max-width: 578px) {
   .col-span-1,
   .col-span-2,
   .col-span-3,
@@ -362,18 +357,9 @@ p.park {
   .nested .col {
      flex-basis: 100%;
   }
+  .grid-item.pull-left {
+    margin-left: -90px;
+  }
+  
 }
-// @media screen and (max-width: 375px) {
 
-// ul.bottomMenu {
-//     // margin-top: 285px;
-// }
-// ul.front-pg {
-//   // margin-left: 6px;
-//   } 
-// }
-@media screen and (max-width: 375px) {
-  .logo {
-    // margin-left: 90px;
-   }
- }

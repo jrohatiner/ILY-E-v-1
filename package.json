@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.2.3",
+    "mapbox-gl-animated-popup": "^0.4.0",
     "sass": "^1.58.3"
   },
   "devDependencies": {

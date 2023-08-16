@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>ILY-e</title>
+  <title>Vehicles</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,54 +17,156 @@
 </head>
 
 <style>
-#map {
-  /* background-image: url(https://assets.codepen.io/460875/map1.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat; */
+body {
+   margin: 0;
+   padding: 0;
+   font-family: "Orbitron", sans-serif;
 }
-h1.VehiclesLoading {
-  text-align: center;
-  padding: 30px;
+h2 {
+   color: white;
+   text-align: center;
+   /* padding: 30px; */
+}
+#map {
+   position: absolute;
+   top: 0%;
+   bottom: 0;
+   width: 100%;
+}
+
+#btn-spin {
+   font: bold 12px/20px "Orbitron", sans-serif;
+   background-color: #323232;
+   color: #fff;
+   position: absolute;
+   top: 20px;
+   left: 50%;
+   z-index: 1;
+   border: 2px solid #7a8c64;
+   width: 200px;
+   height: 600px;
+   margin-left: -100px;
+   display: block;
+   cursor: pointer;
+   padding: 10px 20px;
+   border-radius: 1px;
+}
+#btn-spin:hover {
+   background-color: #4ea0da;
 }
 </style>
-<body id="map">
-  <div class="container">
-  <p class="footText footRow">
-  <h1 class="VehiclesLoading">Vehicles Available Near You</h1>
-  </p>
+<body id="map"></div>
+  <button id="btn-spin"> <a href="reserve.html" style="color:white;">reserve</a>
+  <li><a href="index.html">home</a></li>
+  <div class="row">
+  <div class="col-md-4">Username here</div>
+  <div class="col-md-4 col-md-offset-4"><h3>2023 Tesla Model 3</h3></div>
 
-  <div class="fixed-bottom">
- <div class="row">
-<div class="col col-span-12">
+<div class="col-md-4">NC <br>TSL-9923
+</div>
+  <div class="col-md-3 col-md-offset-3"><img class="image high-quality" id="tesla" src="https://assets.codepen.io/460875/tesla-model-3.png" alt="tesla" width="125" height="55" /></div>
+  <div class="col-md-2 col-md-offset-4"><p>vehicle range 236 miles</p><p>vehicle rating: 4.98 (369 reviews)</p></div>
 
-    <!-- to be removed -->
-  <ul class="bottomMenu" >
-    <li ><a href="login.html" style="color: black;">login</a></li>
-    <li><a href="sign-up.html" style="color: black;">sign-up</a></li>
-    <li><a href="faceSuccess.html" style="color: black;">facial Recognition</a></li>
-    <li><a href="parking.html" style="color: black;">Parking</a></li>
-    <li><a href="sign-up.html" style="color: black;">SignUp Modal</a></li>
-    <li><a href="energy.html" style="color: black;">energy</a></li>
-    <li><a href="express.html" style="color: black;">express</a></li>
-     <li><a href="vehicleMap.html" style="color: black;">vehicle modal page</a></li>
-  </ul>
-    <!-- end menu remove -->
-  
+<div class="col-md-4">First 2 hours free</div><button class="btn btn-primary reserve">
+<a href="reserve.html" style="color:white;">reserve</a>
+</button>
+  <div class="col-md-6 col-md-offset-3"><h3>DAILY RENTAL</h3><p>24 HOURS  | UNLIMITED MILES</p>
+    <button class="btn btn-primary reserve">
+    <a href="reserve.html" style="color:white;">reserve</a>
+  </button></div>
 </div>
-</div>
-  </div>
-</div>
-</div>
+ 
+</button>
+
 <script>
-mapboxgl.accessToken = 'pk.eyJ1IjoiYWNoaWNrYW5kYWNsaWNrIiwiYSI6ImNsbDZwdXB1eTAxNWUzZWtkNWQzcXl6c2YifQ.O-SS3JrdGgWYPr2jtOXVrg';
+mapboxgl.accessToken =
+   "pk.eyJ1IjoiYWNoaWNrYW5kYWNsaWNrIiwiYSI6ImNsbDZwdXB1eTAxNWUzZWtkNWQzcXl6c2YifQ.O-SS3JrdGgWYPr2jtOXVrg";
 const map = new mapboxgl.Map({
-container: 'map', // container ID
-style: 'mapbox://styles/mapbox/streets-v12', // style URL
-center: [-74.5, 40], // starting position [lng, lat]
-zoom: 9, // starting zoom
-projection: 'globe'
+   container: "map",
+   style: "mapbox://styles/mapbox/satellite-v9",
+   projection: "globe", // Display the map as a globe, since satellite-v9 defaults to Mercator
+   zoom: 1.5,
+   center: [-90, 40]
 });
+
+map.on("style.load", () => {
+   map.setFog({}); // Set the default atmosphere style
+});
+
+// The following values can be changed to control rotation speed:
+
+// At low zooms, complete a revolution every two minutes.
+const secondsPerRevolution = 120;
+// Above zoom level 5, do not rotate.
+const maxSpinZoom = 5;
+// Rotate at intermediate speeds between zoom levels 3 and 5.
+const slowSpinZoom = 3;
+
+let userInteracting = false;
+let spinEnabled = true;
+
+function spinGlobe() {
+   const zoom = map.getZoom();
+   if (spinEnabled && !userInteracting && zoom < maxSpinZoom) {
+      let distancePerSecond = 360 / secondsPerRevolution;
+      if (zoom > slowSpinZoom) {
+         // Slow spinning at higher zooms
+         const zoomDif = (maxSpinZoom - zoom) / (maxSpinZoom - slowSpinZoom);
+         distancePerSecond *= zoomDif;
+      }
+      const center = map.getCenter();
+      center.lng -= distancePerSecond;
+      // Smoothly animate the map over one second.
+      // When this animation is complete, it calls a 'moveend' event.
+      map.easeTo({ center, duration: 1000, easing: (n) => n });
+   }
+}
+
+// Pause spinning on interaction
+map.on("mousedown", () => {
+   userInteracting = true;
+});
+
+// Restart spinning the globe when interaction is complete
+map.on("mouseup", () => {
+   userInteracting = false;
+   spinGlobe();
+});
+
+// These events account for cases where the mouse has moved
+// off the map, so 'mouseup' will not be fired.
+map.on("dragend", () => {
+   userInteracting = false;
+   spinGlobe();
+});
+map.on("pitchend", () => {
+   userInteracting = false;
+   spinGlobe();
+});
+map.on("rotateend", () => {
+   userInteracting = false;
+   spinGlobe();
+});
+
+// When animation is complete, start spinning if there is no ongoing interaction
+map.on("moveend", () => {
+   spinGlobe();
+});
+
+document.getElementById("btn-spin").addEventListener("click", (e) => {
+   spinEnabled = !spinEnabled;
+   if (spinEnabled) {
+      spinGlobe();
+      e.target.innerHTML = "Pause rotation";
+   } else {
+      map.stop(); // Immediately end ongoing animation
+      e.target.innerHTML = "Start rotation";
+   }
+});
+
+spinGlobe();
 </script>
+
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
