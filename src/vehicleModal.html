@@ -29,12 +29,12 @@ h1.VehiclesLoading {
 #vehicleDisplayModal {
   visibility: visible !important;
 }
-#loader{
-  width: 200px;
-  height: 200px;
-  color:green;
-  top:20;
-  left:25;
+#globe{
+  /* width: 200px;
+  height: 200px; */
+  /* background-color:transparent; */
+  top:50;
+  left:60;
 }
 #sUp {
   width: 40%;
@@ -53,17 +53,22 @@ button.btn.btn-primary.reserve {
     background-color: rgb(132, 136, 140);
     border: 1px rgb(132, 136, 140) solid;
 }
+#loader {
+  /* width: 10rem; 
+  height: 10rem;  */
+}
 </style>
 
 <body id="map">
   <div class="container">
-  <!-- <div id="loader">
-  <div class="spinner-grow" style="width: 6rem; height: 6rem;"role="status">
+  <div id="loader">
+    <img class="image high-quality" id="globe" src="https://assets.codepen.io/460875/globe.png" alt="globe" width="100" height="100" />
+  <!-- <div class="spinner-grow"> -->
   <span class="visually-hidden"></span>
-</div></div>
+<!-- </div> --> </div> 
   <button type="button" class="btn btn-link" id="sUp" style="color:black;border:1px black solid;" data-bs-toggle="modal" data-bs-target="#vehicleDisplayModal">Reserve Vehicles Modal
-</button>  -->
-  <!-- <img class="image high-quality" id="globe" src="https://assets.codepen.io/460875/globe.png" alt="globe" width="200" height="200" /> -->
+</button> 
+ 
 
 <!-- Modal -->
 <div class="modal fade in" id="vehicleDisplayModal" tabindex="-1" aria-labelledby="vehicleDisplayModLabel" aria-hidden="true">
@@ -111,15 +116,14 @@ button.btn.btn-primary.reserve {
 <div class="col col-span-12">
 
     <!-- to be removed -->
-  <ul class="bottomMenu">
+    <ul class="bottomMenu">
+    <li><a href="index.html">home</a></li>
     <li><a href="login.html">login</a></li>
-    <li><a href="sign-up.html">sign-up</a></li>
-    <li><a href="faceSuccess.html">facial Recognition</a></li>
-    <li><a href="parking.html">Parking</a></li>
+    <li><a href="vehicleModal.html">vehicle modal page</a></li>
+    <!-- <li><a href="vehicleMap.html">map with car icon example</a></li> -->
     <li><a href="sign-up.html">SignUp Modal</a></li>
     <li><a href="energy.html">energy</a></li>
     <li><a href="express.html">express</a></li>
-    <li><a href="vehicleModal.html">vehicle modal page</a></li>
     <li><a href="info.html">info</a></li>
   </ul>
     <!-- end menu remove -->
