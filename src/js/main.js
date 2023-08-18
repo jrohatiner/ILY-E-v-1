@@ -1,3 +1,5 @@
+// service worker lives here
+
 window.onload = () => {
   'use strict';
 
