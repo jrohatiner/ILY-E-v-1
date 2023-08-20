@@ -14,7 +14,7 @@ body {
   margin: 0 auto;
   height: 100vh;
 }
-.grid-item.pull-left {
+li.frt-pg {
   color: green;
   font-size: 1em;
   text-transform: uppercase;
@@ -29,9 +29,24 @@ body {
 img.image.high-quality {
   margin-left: 15px;
 }
-// #globe {
-//   margin-left: 0px;
-// }
+.row.topRow {
+  display: -webkit-flex;
+  display: flex;
+}
+.column.side {
+  flex: 20%;
+}
+  /* right column */
+.column.middle {
+  flex: 20%;
+} 
+.image.high-quality.logo {
+  float:right;
+}
+ul.front-pg {
+   margin-left: -40px;
+   margin-top: 6px;
+}
 
 // sign-up page styles inside modal
 
@@ -206,14 +221,14 @@ h2.gettinVees {
   color: white;
   text-align: center;
 }
-.topBar {
-  display: grid;
-  grid-template-columns: auto auto;
-}
-.grid-item {
-  text-align: center;
-  padding: 20px;
-}
+// .topBar {
+//   display: grid;
+//   grid-template-columns: auto auto;
+// }
+// .grid-item {
+//   text-align: center;
+//   padding: 20px;
+// }
 .frt-pg a {
   color:#008a0e;
 }
@@ -260,13 +275,14 @@ a.scanTrans {
 #modalBtn{
   margin-left: 155px;
 }
-.card.loginCard {
-  margin: 1%;
-  background-image: url("https://assets.codepen.io/460875/main-bkgrd.png");
-  background-repeat: no-repeat; 
-  background-size: 100% 100%;
-  border: none;  
-}
+// .card.loginCard {
+//   margin: 1%;
+//   background-image: url("https://assets.codepen.io/460875/main-bkgrd.png");
+//   background-repeat: no-repeat; 
+//   background-size: 100% 100%;
+//   border: none;  
+// }
+
 .fScan.span {
   text-align: center;
 }
@@ -302,38 +318,20 @@ li a:hover {
 p.park {
   color: white;
 }
-
+.infoBox {
+  background-color:rgb(109, 120, 138);
+  width: 200px;
+  height: 100px;
+  margin: auto;
+  color:white;
+}
 // media quieries
 
 // @media screen and (max-width: 992px) {
-//   .topBar{
-//     margin-left: 300px;
-//     padding: 10px 45px;
-//   }
 // }
-// @media screen and (max-width: 768px) {
-//   .topBar{
-//     margin-left: 175px;
-//     padding: 10px 45px;
-//   }
+// @media screen and (max-width: 775px) {
+//   
 // }
-// @media screen and (max-width: 575px){
-//   .topBar {
-//     margin-right: 100px;
-//     padding: 10px 45px;
-//   }
-// }
-@media screen and (max-width: 992px) {
-  .grid-item {
-    text-align: center;
-    padding: 15px;
-  }
-}
-@media screen and (max-width: 775px) {
-  .grid-item {
-    // margin-left: -100px;
-  }
-}
 
 @media all and (max-width: 578px) {
   .col-span-1,
@@ -354,9 +352,15 @@ p.park {
   .nested .col {
      flex-basis: 100%;
   }
-  .grid-item.pull-left {
-    margin-left: -90px;
-  }
-  
+  // .grid-item.pull-left {
+  //   margin-left: -90px;
+  // }
 }
+@media (max-width: 600px) {
+  .row {
+     -webkit-flex-direction: row;
+     flex-direction: row;
+     flex: 50%;
+  }
+} 
 
