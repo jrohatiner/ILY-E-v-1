@@ -320,19 +320,16 @@ p.park {
 }
 .infoBox {
   background-color:rgb(109, 120, 138);
-  width: 200px;
-  height: 100px;
+  width: 400px;
+  height: 200px;
   margin: auto;
   color:white;
+  border-radius: 6px;
+  padding: 15px 5px 1px ;
 }
-// media quieries
-
-// @media screen and (max-width: 992px) {
-// }
-// @media screen and (max-width: 775px) {
-//   
-// }
-
+p.footText.footRow {
+  padding: 25px;
+}
 @media all and (max-width: 578px) {
   .col-span-1,
   .col-span-2,
