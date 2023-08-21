@@ -221,23 +221,11 @@ h2.gettinVees {
   color: white;
   text-align: center;
 }
-// .topBar {
-//   display: grid;
-//   grid-template-columns: auto auto;
-// }
-// .grid-item {
-//   text-align: center;
-//   padding: 20px;
-// }
 .frt-pg a {
   color:#008a0e;
 }
 .frt-pg a:hover {
   color:white;
-}
-ul.bottomMenu li {
-  display:inline;
-  margin-right: 15px;
 }
 p.footText {
   font-size: .625em;
@@ -275,14 +263,6 @@ a.scanTrans {
 #modalBtn{
   margin-left: 155px;
 }
-// .card.loginCard {
-//   margin: 1%;
-//   background-image: url("https://assets.codepen.io/460875/main-bkgrd.png");
-//   background-repeat: no-repeat; 
-//   background-size: 100% 100%;
-//   border: none;  
-// }
-
 .fScan.span {
   text-align: center;
 }
@@ -296,9 +276,14 @@ ul.bottomMenu {
 position: relative;
 bottom: 0;
 width: 100%;
-// height: 100vh;
-font-size: x-small ;
+font-size: small ;
 word-break: keep-all;
+display:inline;
+margin-right: 15px;
+}
+ul.bottomMenu li {
+  display: inline;
+  margin-right: 10px;
 }
 .footText.footRow {
   text-align:center
