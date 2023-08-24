@@ -17,11 +17,17 @@
 </head>
 
 <style>
-#map {
-  background-image: url(https://assets.codepen.io/460875/map1.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
+body#map {
+      background: transparent;
+      margin: 0;
+      padding: 0;
+      font-family: 'Orbitron', sans-serif;
+      background-image: url('https://assets.codepen.io/460875/Map2.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  
 h1.VehiclesLoading {
   text-align: center;
   padding: 30px;
@@ -29,20 +35,12 @@ h1.VehiclesLoading {
 #vehicleDisplayModal {
   visibility: visible !important;
 }
-#globe{
-  /* width: 200px;
-  height: 200px; */
-  /* background-color:transparent; */
-  top:50;
-  left:50;
-}
 #sUp {
   width: 40%;
   color:black;
   font-weight: bolder;
   /* background-color: white; */
   text-decoration: none;
-  /* background:url(https://assets.codepen.io/460875/tesla-model-3.png); */
   
 }
 .box {
@@ -64,19 +62,11 @@ button.btn.btn-primary.reserve {
     background-color: rgb(132, 136, 140);
     border: 1px rgb(132, 136, 140) solid;
 }
-#loader {
-  /* width: 10rem; 
-  height: 10rem;  */
-}
 </style>
 
 <body id="map">
   <div class="container">
-  <!-- <div id="loader">
-    <img class="image high-quality" id="globe" src="https://assets.codepen.io/460875/globe.png" alt="globe" width="100" height="100" />
-  <div class="spinner-grow"> 
-  <span class="visually-hidden"></span>
- </div>  -->
+  
 <div class="box">
 <img class="image high-quality" id="car" src="https://assets.codepen.io/460875/tesla-model-3.png" alt="car" width="60" height="40"/>
 </div>
@@ -110,7 +100,7 @@ button.btn.btn-primary.reserve {
   </button>
       <div class="col-md-6 col-md-offset-3"><h3>DAILY RENTAL</h3><p>24 HOURS  | UNLIMITED MILES</p>
         <button class="btn btn-primary reserve">
-        <a href="reserve.html" style="color:white;">reserve</a>
+        <a href="#" style="color:white;">reserve</a>
       </button></div>
       <div class="col-md-4">STUFF</div>
       <div class="col-md-6 col-md-offset-3">.col-md-6 .col-md-offset-3</div>
@@ -124,9 +114,7 @@ button.btn.btn-primary.reserve {
   </div>
 </div>
   <!-- END MODAL CODE -->
-  <p class="footText footRow">
-  <h1 class="VehiclesLoading"> Sign In Successful Loading Vehicles</h1>
-  </p>
+  
   <div class="fixed-bottom">
  <div class="row">
 <div class="col col-span-8">
@@ -149,12 +137,12 @@ button.btn.btn-primary.reserve {
 </div>
 </div>
 <!-- keeps modal default state open onload -->
-<!-- <script>
+<script>
 document.addEventListener('DOMContentLoaded', function () {
   var modal = new bootstrap.Modal(document.getElementById('vehicleDisplayModal'));
   modal.show();
 });
-</script> -->
+</script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
