@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Map background with reserve modal</title>
+  <title>Map with reserve vehicle modal</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,56 +13,7 @@
  <!-- Bootstrap CSS -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
  <script src="main.js"></script>
- <!-- <script src="loader.js"></script> -->
 </head>
-
-<style>
-body#map {
-      background: transparent;
-      margin: 0;
-      padding: 0;
-      font-family: 'Orbitron', sans-serif;
-      background-image: url('https://assets.codepen.io/460875/Map2.png');
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-    }
-  
-h1.VehiclesLoading {
-  text-align: center;
-  padding: 30px;
-}
-#vehicleDisplayModal {
-  visibility: visible !important;
-}
-#sUp {
-  width: 40%;
-  color:black;
-  font-weight: bolder;
-  /* background-color: white; */
-  text-decoration: none;
-  
-}
-.box {
-  background-image: url('https://assets.codepen.io/460875/tesla-model-3.png');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: bottom right;
-}
-#car{
-  margin-top: 3em;
-}
-.modal-content {
-  background-color: rgb(57,57,57);
-}
-.modal-body {
-  color: white;
-}
-button.btn.btn-primary.reserve {
-    background-color: rgb(132, 136, 140);
-    border: 1px rgb(132, 136, 140) solid;
-}
-</style>
 
 <body id="map">
   <div class="container">
@@ -73,8 +24,6 @@ button.btn.btn-primary.reserve {
 <button type="button" class="btn btn-link" id="sUp" style="color:black;" data-bs-toggle="modal" data-bs-target="#vehicleDisplayModal">
 <img class="image high-quality" id="car" src="https://assets.codepen.io/460875/tesla-model-3.png" alt="car" width="60" height="40"/>
 </button> 
-
-  
 
 <!-- Modal -->
 <div class="modal fade in" id="vehicleDisplayModal" tabindex="-1" aria-labelledby="vehicleDisplayModLabel" aria-hidden="true">

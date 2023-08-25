@@ -14,11 +14,24 @@ body {
   margin: 0 auto;
   height: 100vh;
 }
+body#map {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-image: url('https://assets.codepen.io/460875/Map2.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+h1.VehiclesLoading {
+  text-align: center;
+  padding: 30px;
+}
 li.frt-pg {
   color: green;
   font-size: 1em;
   text-transform: uppercase;
-  // line-height: 2;
 }
 .d-flex {
   margin-top: 4.25em;
@@ -48,17 +61,54 @@ ul.front-pg {
    margin-top: 6px;
 }
 
-// sign-up page styles inside modal
+#vehicleDisplayModal {
+  visibility: visible !important;
+}
+.modal-header {
+  border:none;
+}
+.modal-content {
+  background-color: rgb(57,57,57);
+}
+.modal-body {
+  color: white;
+  border: none;
+}
+.modal-footer {
+    border: none;
+}
+
+// sign-up and reserve pages styles inside modal
 
 input#username, 
 input#password {
     background-color: #008a0e;
     color: white!important;
 }
+button.btn.btn-primary.reserve {
+  background-color: rgb(132, 136, 140);
+  border: 1px rgb(132, 136, 140) solid;
+}
 button#sUp {
   margin-left: 90px;
   margin-top: 4rem;
 }
+#sUp {
+  width: 40%;
+  color:black;
+  font-weight: bolder;
+  text-decoration: none;
+}
+.box {
+  background-image: url('https://assets.codepen.io/460875/tesla-model-3.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom right;
+}
+#car{
+  margin-top: 3em;
+}
+
 
 // end sign-up page styles inside modal
 
@@ -69,7 +119,6 @@ ul.front-pg li.frt-pg {
 li.frt-pg {
   display:flex;
   flex-flow: nowrap;
-  // min-width: 100vw;
 }
 button.btn.btn-primary {
   background-color: #008a0e;
@@ -88,15 +137,6 @@ button.btn.btn-primary:hover {
   padding: 5px 3px;
   border: 1 px solid #008a0e;
 }
-// button.btn.btn-secondary:hover {
-//   background-color: #6f7681;
-//   color: white;
-//   text-align: center;
-//   text-decoration: none;
-//   display: inline-block;
-//   padding: 20px 1px;
-//   border: 1 px solid #6f7681;
-// }
 a {
   text-decoration: none;
   color: white;
@@ -272,6 +312,7 @@ a.scanTrans {
   background-size: 100% 100%;
   border: none;  
 }
+// bottom menu to be removed
 ul.bottomMenu {
 position: relative;
 bottom: 0;
@@ -285,6 +326,7 @@ ul.bottomMenu li {
   display: inline;
   margin-right: 10px;
 }
+// end bottom menu to be removed
 .footText.footRow {
   text-align:center
 }
