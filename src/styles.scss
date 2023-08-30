@@ -60,7 +60,6 @@ ul.front-pg {
    margin-left: -40px;
    margin-top: 6px;
 }
-
 #vehicleDisplayModal {
   visibility: visible !important;
 }
@@ -78,7 +77,87 @@ ul.front-pg {
     border: none;
 }
 
-// sign-up and reserve pages styles inside modal
+// sign-up page
+#signup-bckgrd {
+  background-color: #020209;
+  color: white;
+}
+#signingUp {
+  margin: 30px 25px;
+}
+button {
+  background-color: #353a3d;
+  border: 1px solid #353a3d;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 10px 0 0 0;
+  padding: 10px;
+}
+.license,
+.insure,
+.addPay {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  width: 100%;
+}
+.addPay a {
+  text-decoration: none;
+  color: white;
+}
+.addPay a:hover {
+  text-decoration: none;
+  color: #0f3621;
+}
+.insure a {
+  text-decoration: none;
+  color: white;
+}
+.insure a:hover {
+  text-decoration: none;
+  color: #0f3621;
+}
+.license a {
+  text-decoration: none;
+  color: white;
+}
+.license a:hover {
+  text-decoration: none;
+  color: #0f3621;
+}
+button:disabled {
+  color: #888;
+  cursor: default;
+}
+button:not(:disabled):hover {
+  background-color: #0f3320;
+  color: white;
+}
+.box {
+  width: 70px;
+  height: 75px;
+  background-color: #fff;
+  border: 1px black solid;
+  text-align: center;
+  border-radius: 50%;
+  padding: 8px 5px 5px 1px;
+  margin: auto;
+}
+.box2 {
+  padding: 20%;
+}
+p {
+  font-size: 19px;
+  font-weight: 400;
+  text-align:center;
+}
+// end sign-up page
+
+// reserve page styles inside modal
 
 input#username, 
 input#password {
@@ -108,9 +187,6 @@ button#sUp {
 #car{
   margin-top: 3em;
 }
-
-
-// end sign-up page styles inside modal
 
 ul.front-pg li.frt-pg {
   display:flex;
@@ -376,9 +452,6 @@ p.footText.footRow {
   .nested .col {
      flex-basis: 100%;
   }
-  // .grid-item.pull-left {
-  //   margin-left: -90px;
-  // }
 }
 @media (max-width: 600px) {
   .row {
@@ -387,4 +460,14 @@ p.footText.footRow {
      flex: 50%;
   }
 } 
+@media (min-width: 400px) {
+  button {
+     font-size: 20px;
+     font-size: var(--large-mobile-font-size);
+  }
+  p {
+     font-weight: 400;
+     line-height: 1.5em;
+  }
+}
 
