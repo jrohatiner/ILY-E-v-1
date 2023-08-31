@@ -91,7 +91,7 @@ button {
   border-radius: 6px;
   color: white;
   cursor: pointer;
-  display: block;
+  // display: block;
   font-size: 20px;
   font-weight: 400;
   margin: 10px 0 0 0;
@@ -149,13 +149,51 @@ button:not(:disabled):hover {
 }
 .box2 {
   padding: 20%;
+  align-items: center;
 }
 p {
   font-size: 19px;
   font-weight: 400;
   text-align:center;
 }
-// end sign-up page
+label {
+  display: inline-block;
+  font-size: 0.675em;
+  text-wrap: nowrap;
+  margin: 0 0 1px 0;
+}
+#next {
+  float: right;
+}
+input[type="checkbox"]#cCard1 {
+  box-sizing: border-box;
+}
+input:not(:focus):invalid {
+  color: red;
+  outline-color: green;
+}
+#next {
+  float: right;
+}
+// addCard pg
+.col-leftCk {
+  float: left;
+  width: 50%;
+  margin-top: 20px;
+}
+.col-rgtLab {
+  float: left;
+  width: 50%;
+  margin-top: 15px;
+  margin-bottom: 1em;
+  margin-left: -40px;
+}
+p.signText {
+  margin-bottom: 2em;
+  text-align: center;
+  text-wrap: nowrap;
+}
+// end all sign-up page sequence
 
 // reserve page styles inside modal
 
@@ -353,12 +391,11 @@ p.footText {
   margin-top: 4.25rem;
 }
 input {
-text-align:center;
-border-radius: 10px;
+text-align:left;
+border-radius: 4px;
 padding: 10px 5px;
-background-color: #008a0e;
 color: white !important;
-max-width: 50%;
+width: calc(100% - 30px);
 }
 .mTop {
   margin-top: 10px;

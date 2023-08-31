@@ -1,17 +1,26 @@
 
-  //date and time
-  
-  function getCurrentDate() {
-      let today = new Date();
-      let dd = today.getDate();
-      let mm = today.getMonth() + 1; // January is 0
-      let yyyy = today.getFullYear();
-      return mm + "/" + dd + "/" + yyyy;
-    }
+// show modal
+
+    let dialog = document.querySelector("dialog");
+    document.addEventListener("DOMContentLoaded", function () {
+       const dialog = document.getElementById("signup-bckgrd");
+       dialog.showModal();
+    });
+
+    document.querySelector("#close").onclick = function () {
+    dialog.close();
+     };
+
+    // save btn
+    let save = document.querySelector();
+    document.getElementById("save").addEventListener("click", myTra);
     
-    document.getElementById("date").innerHTML= getCurrentDate();
+    function myTra() {
+       alert("SAVED!");
+    }
 
     // login btns font color
+    // document.getElementById("postal-code").style.width = "100%";
 
     document.getElementsByClassName("username").style.color = "white"; 
     document.getElementsByClassName("pwd").style.color = "white"; 
