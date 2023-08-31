@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>ILY-e</title>
+  <title>Map with reserve vehicle modal</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,57 +13,17 @@
  <!-- Bootstrap CSS -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
  <script src="main.js"></script>
- <script src="loader.js"></script>
 </head>
-
-<style>
-#map {
-  background-image: url(https://assets.codepen.io/460875/map1.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
-h1.VehiclesLoading {
-  text-align: center;
-  padding: 30px;
-}
-#vehicleDisplayModal {
-  visibility: visible !important;
-}
-#loader{
-  width: 200px;
-  height: 200px;
-  color:green;
-  top:20;
-  left:25;
-}
-#sUp {
-  width: 40%;
-  color:black;
-  font-weight: bolder;
-  background-color: white;
-  text-decoration: none;
-}
-.modal-content {
-  background-color: rgb(57,57,57);
-}
-.modal-body {
-  color: white;
-}
-button.btn.btn-primary.reserve {
-    background-color: rgb(132, 136, 140);
-    border: 1px rgb(132, 136, 140) solid;
-}
-</style>
 
 <body id="map">
   <div class="container">
-  <!-- <div id="loader">
-  <div class="spinner-grow" style="width: 6rem; height: 6rem;"role="status">
-  <span class="visually-hidden"></span>
-</div></div>
-  <button type="button" class="btn btn-link" id="sUp" style="color:black;border:1px black solid;" data-bs-toggle="modal" data-bs-target="#vehicleDisplayModal">Reserve Vehicles Modal
-</button>  -->
-  <!-- <img class="image high-quality" id="globe" src="https://assets.codepen.io/460875/globe.png" alt="globe" width="200" height="200" /> -->
+  
+<div class="box">
+<img class="image high-quality" id="car" src="https://assets.codepen.io/460875/tesla-model-3.png" alt="car" width="60" height="40"/>
+</div>
+<button type="button" class="btn btn-link" id="sUp" style="color:black;" data-bs-toggle="modal" data-bs-target="#vehicleDisplayModal">
+<img class="image high-quality" id="car" src="https://assets.codepen.io/460875/tesla-model-3.png" alt="car" width="60" height="40"/>
+</button> 
 
 <!-- Modal -->
 <div class="modal fade in" id="vehicleDisplayModal" tabindex="-1" aria-labelledby="vehicleDisplayModLabel" aria-hidden="true">
@@ -89,7 +49,7 @@ button.btn.btn-primary.reserve {
   </button>
       <div class="col-md-6 col-md-offset-3"><h3>DAILY RENTAL</h3><p>24 HOURS  | UNLIMITED MILES</p>
         <button class="btn btn-primary reserve">
-        <a href="reserve.html" style="color:white;">reserve</a>
+        <a href="#" style="color:white;">reserve</a>
       </button></div>
       <div class="col-md-4">STUFF</div>
       <div class="col-md-6 col-md-offset-3">.col-md-6 .col-md-offset-3</div>
@@ -103,23 +63,19 @@ button.btn.btn-primary.reserve {
   </div>
 </div>
   <!-- END MODAL CODE -->
-  <p class="footText footRow">
-  <h1 class="VehiclesLoading"> Sign In Successful Loading Vehicles</h1>
-  </p>
+  
   <div class="fixed-bottom">
  <div class="row">
-<div class="col col-span-12">
+<div class="col col-span-8">
 
     <!-- to be removed -->
-  <ul class="bottomMenu">
+    <ul class="bottomMenu">
+    <li><a href="index.html">home</a></li>
     <li><a href="login.html">login</a></li>
-    <li><a href="sign-up.html">sign-up</a></li>
-    <li><a href="faceSuccess.html">facial Recognition</a></li>
-    <li><a href="parking.html">Parking</a></li>
-    <li><a href="sign-up.html">SignUp Modal</a></li>
+    <li><a href="vehicleModal.html">vehicle modal page</a></li>
+    <li><a href="new-sign-up.html">SignUp Modal</a></li>
     <li><a href="energy.html">energy</a></li>
     <li><a href="express.html">express</a></li>
-    <li><a href="vehicleModal.html">vehicle modal page</a></li>
     <li><a href="info.html">info</a></li>
   </ul>
     <!-- end menu remove -->
@@ -129,6 +85,7 @@ button.btn.btn-primary.reserve {
   </div>
 </div>
 </div>
+<!-- keeps modal default state open onload -->
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   var modal = new bootstrap.Modal(document.getElementById('vehicleDisplayModal'));

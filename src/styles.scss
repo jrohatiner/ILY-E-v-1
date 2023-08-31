@@ -14,11 +14,24 @@ body {
   margin: 0 auto;
   height: 100vh;
 }
-.grid-item.pull-left {
+body#map {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-image: url('https://assets.codepen.io/460875/Map2.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+h1.VehiclesLoading {
+  text-align: center;
+  padding: 30px;
+}
+li.frt-pg {
   color: green;
   font-size: 1em;
   text-transform: uppercase;
-  // line-height: 2;
 }
 .d-flex {
   margin-top: 4.25em;
@@ -29,26 +42,151 @@ body {
 img.image.high-quality {
   margin-left: 15px;
 }
-#globe {
-  margin-left: 0px;
+.row.topRow {
+  display: -webkit-flex;
+  display: flex;
 }
-#globe-1 {
-  margin-left: 0px;
+.column.side {
+  flex: 20%;
+}
+  /* right column */
+.column.middle {
+  flex: 20%;
+} 
+.image.high-quality.logo {
+  float:right;
+}
+ul.front-pg {
+   margin-left: -40px;
+   margin-top: 6px;
+}
+#vehicleDisplayModal {
+  visibility: visible !important;
+}
+.modal-header {
+  border:none;
+}
+.modal-content {
+  background-color: rgb(57,57,57);
+}
+.modal-body {
+  color: white;
+  border: none;
+}
+.modal-footer {
+    border: none;
 }
 
-// sign-up page styles inside modal
+// sign-up page
+#signup-bckgrd {
+  background-color: #020209;
+  color: white;
+}
+#signingUp {
+  margin: 30px 25px;
+}
+button {
+  background-color: #353a3d;
+  border: 1px solid #353a3d;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 10px 0 0 0;
+  padding: 10px;
+}
+.license,
+.insure,
+.addPay {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  width: 100%;
+}
+.addPay a {
+  text-decoration: none;
+  color: white;
+}
+.addPay a:hover {
+  text-decoration: none;
+  color: #0f3621;
+}
+.insure a {
+  text-decoration: none;
+  color: white;
+}
+.insure a:hover {
+  text-decoration: none;
+  color: #0f3621;
+}
+.license a {
+  text-decoration: none;
+  color: white;
+}
+.license a:hover {
+  text-decoration: none;
+  color: #0f3621;
+}
+button:disabled {
+  color: #888;
+  cursor: default;
+}
+button:not(:disabled):hover {
+  background-color: #0f3320;
+  color: white;
+}
+.box {
+  width: 70px;
+  height: 75px;
+  background-color: #fff;
+  border: 1px black solid;
+  text-align: center;
+  border-radius: 50%;
+  padding: 8px 5px 5px 1px;
+  margin: auto;
+}
+.box2 {
+  padding: 20%;
+}
+p {
+  font-size: 19px;
+  font-weight: 400;
+  text-align:center;
+}
+// end sign-up page
+
+// reserve page styles inside modal
 
 input#username, 
 input#password {
     background-color: #008a0e;
     color: white!important;
 }
+button.btn.btn-primary.reserve {
+  background-color: rgb(132, 136, 140);
+  border: 1px rgb(132, 136, 140) solid;
+}
 button#sUp {
   margin-left: 90px;
   margin-top: 4rem;
 }
-
-// end sign-up page styles inside modal
+#sUp {
+  width: 40%;
+  color:black;
+  font-weight: bolder;
+  text-decoration: none;
+}
+.box {
+  background-image: url('https://assets.codepen.io/460875/tesla-model-3.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom right;
+}
+#car{
+  margin-top: 3em;
+}
 
 ul.front-pg li.frt-pg {
   display:flex;
@@ -57,7 +195,6 @@ ul.front-pg li.frt-pg {
 li.frt-pg {
   display:flex;
   flex-flow: nowrap;
-  // min-width: 100vw;
 }
 button.btn.btn-primary {
   background-color: #008a0e;
@@ -76,15 +213,6 @@ button.btn.btn-primary:hover {
   padding: 5px 3px;
   border: 1 px solid #008a0e;
 }
-// button.btn.btn-secondary:hover {
-//   background-color: #6f7681;
-//   color: white;
-//   text-align: center;
-//   text-decoration: none;
-//   display: inline-block;
-//   padding: 20px 1px;
-//   border: 1 px solid #6f7681;
-// }
 a {
   text-decoration: none;
   color: white;
@@ -209,23 +337,11 @@ h2.gettinVees {
   color: white;
   text-align: center;
 }
-.topBar {
-  display: grid;
-  grid-template-columns: auto auto;
-}
-.grid-item {
-  text-align: center;
-  padding: 20px;
-}
 .frt-pg a {
   color:#008a0e;
 }
 .frt-pg a:hover {
   color:white;
-}
-ul.bottomMenu li {
-  display:inline;
-  margin-right: 15px;
 }
 p.footText {
   font-size: .625em;
@@ -263,13 +379,6 @@ a.scanTrans {
 #modalBtn{
   margin-left: 155px;
 }
-.card.loginCard {
-  margin: 1%;
-  background-image: url("https://assets.codepen.io/460875/main-bkgrd.png");
-  background-repeat: no-repeat; 
-  background-size: 100% 100%;
-  border: none;  
-}
 .fScan.span {
   text-align: center;
 }
@@ -279,14 +388,21 @@ a.scanTrans {
   background-size: 100% 100%;
   border: none;  
 }
+// bottom menu to be removed
 ul.bottomMenu {
 position: relative;
 bottom: 0;
 width: 100%;
-// height: 100vh;
-font-size: x-small ;
+font-size: small ;
 word-break: keep-all;
+display:inline;
+margin-right: 15px;
 }
+ul.bottomMenu li {
+  display: inline;
+  margin-right: 10px;
+}
+// end bottom menu to be removed
 .footText.footRow {
   text-align:center
 }
@@ -305,39 +421,18 @@ li a:hover {
 p.park {
   color: white;
 }
-
-// media quieries
-
-// @media screen and (max-width: 992px) {
-//   .topBar{
-//     margin-left: 300px;
-//     padding: 10px 45px;
-//   }
-// }
-// @media screen and (max-width: 768px) {
-//   .topBar{
-//     margin-left: 175px;
-//     padding: 10px 45px;
-//   }
-// }
-// @media screen and (max-width: 575px){
-//   .topBar {
-//     margin-right: 100px;
-//     padding: 10px 45px;
-//   }
-// }
-@media screen and (max-width: 992px) {
-  .grid-item {
-    text-align: center;
-    padding: 15px;
-  }
+.infoBox {
+  background-color:rgb(109, 120, 138);
+  width: 400px;
+  height: 200px;
+  margin: auto;
+  color:white;
+  border-radius: 6px;
+  padding: 15px 5px 1px ;
 }
-@media screen and (max-width: 775px) {
-  .grid-item {
-    // margin-left: -100px;
-  }
+p.footText.footRow {
+  padding: 25px;
 }
-
 @media all and (max-width: 578px) {
   .col-span-1,
   .col-span-2,
@@ -357,9 +452,22 @@ p.park {
   .nested .col {
      flex-basis: 100%;
   }
-  .grid-item.pull-left {
-    margin-left: -90px;
+}
+@media (max-width: 600px) {
+  .row {
+     -webkit-flex-direction: row;
+     flex-direction: row;
+     flex: 50%;
   }
-  
+} 
+@media (min-width: 400px) {
+  button {
+     font-size: 20px;
+     font-size: var(--large-mobile-font-size);
+  }
+  p {
+     font-weight: 400;
+     line-height: 1.5em;
+  }
 }
 

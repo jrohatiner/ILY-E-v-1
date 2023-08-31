@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ILY-e</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.ico" type="image/x-icon" />  
+<link rel="apple-touch-icon" href="images/hello-icon-152.png">   
+<meta name="theme-color" content="white"/>  
+<meta name="apple-mobile-web-app-capable" content="yes">  
+<meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+<meta name="apple-mobile-web-app-title" content="ILY-E"> 
+<meta name="msapplication-TileImage" content="images/hello-icon-144.png">  
+<meta name="msapplication-TileColor" content="#FFFFFF">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/4500d8ef13.js" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="main.js"></script>
+</head>
+<style>
+  /* dialog background */
+
+#addCard-bckgrd {
+   font-family: "Orbitron", sans-serif;
+   background-color: #020209;
+   color: white;
+}
+dialog#addCard-bckgrd {
+   width: 50%;
+}
+p.signText {
+   margin-bottom: 2em;
+   text-align: center;
+   text-wrap: nowrap;
+}
+button {
+   background-color: #353a3d;
+   border: 1px solid #353a3d;
+   border-radius: 6px;
+   color: white;
+   cursor: pointer;
+   text-transform: uppercase;
+   padding: 8px;
+}
+/* .addPay {
+   text-align: center;
+   text-decoration: none;
+   color: white;
+   width: 100%;
+}
+.addPay a {
+   text-decoration: none;
+   color: white;
+}
+.addPay a:hover {
+   text-decoration: none;
+   color: #0f3621;
+} */
+button:disabled {
+   color: #888;
+   cursor: default;
+}
+button:not(:disabled):hover {
+   background-color: #0f3320;
+   color: white;
+}
+.box {
+   width: 65px;
+   height: 60px;
+   background-color: #fff;
+   border: 1px black solid;
+   text-align: center;
+   border-radius: 50%;
+   padding: 8px 5px 5px 1px;
+   margin: auto;
+}
+.box2 {
+   align-items: center;
+}
+.col-leftAdd {
+   margin-left: 20px;
+   width: 100%;
+   margin-top: 20px;
+}
+/* Clear floats after the columns */
+.row::after {
+   content: "";
+   display: table;
+   clear: both;
+}
+input {
+   border: 1px solid #ccc;
+   padding: 12px;
+   width: 100%;
+   width: calc(100% - 30px); /* full width minus padding */
+}
+input[type="text-area"] {
+   box-sizing: border-box;
+}
+input:not(:focus):invalid {
+   color: red;
+   outline-color: green;
+}
+label {
+   display: inline-block;
+   font-size: 0.675em;
+   text-wrap: nowrap;
+   margin: 0 0 1px 0;
+}
+#next {
+   float: right;
+}
+@media (min-width: 400px) {
+   button {
+      font-size: 18px;
+   }
+   input {
+      font-size: 18px;
+   }
+   label {
+      font-size: 18px;
+   }
+   p {
+      font-size: 18px;
+      line-height: 1.5em;
+   }
+}
+@media (min-width: 500px) {
+   button {
+      font-size: 18px;
+   }
+   form {
+      margin: 0 0 20px 0;
+      padding: 0 0 100px 0;
+   }
+   input {
+      font-size: 18px; /* fallback */
+   }
+   label {
+      font-size: 18px; /* fallback */
+      margin: 0 0 6px 0;
+   }
+}
+</style>
+<body>
+  <div class="container">
+
+    <!--    <button type="hidden" id="show">SIGN-UP</button> -->
+    <dialog id="addCard-bckgrd">
+       <title>Add Credit Card</title>
+       <div class="box">
+          <i class="fa-thin fa-id-card fa-xl" style="color: #183152;margin-top: 15px;"></i><br>
+          <i class="fa-thin fa-id-card fa-2xl" style="color: #183152;margin-top: 15px;font-size:34px;"></i>
+       </div>
+       <div class="box2">
+          <p class="signText">ADD CREDIT CARD</p>
+          <form>
+             <div class="row">
+ 
+                <div class="col-leftAdd">
+                   <input type="text-area" id="addCard1" name="addCard1" value="name on card"><br><br>
+                   <input type="text-area" id="addCard2" value="card number">
+                
+                <p><button id="addCardBtn">save</button></p>
+                </div>
+             </div>
+          </form>
+          <p class="signText">for incidentals and add ons</p>
+          <!-- to be moved to paymenent window-->
+          <!--           this will trigger a mock payment -->
+          <!--          <p><button id="buyButton">Pay</button></p> -->
+          <!--          this is the trigger to close the form -->
+          <button id="close">Cancel</button>
+          <a href="/addCard.html"><button id="next">NEXT</button></a>
+    </dialog>
+ </div>
+ </div>
+<script>
+  let dialog = document.querySelector("dialog");
+document.querySelector("#close").onclick = function () {
+   dialog.close();
+};
+document.addEventListener("DOMContentLoaded", function () {
+   const dialog = document.getElementById("addCard-bckgrd");
+   dialog.showModal();
+});
+</script>
+</body>
+</html>
