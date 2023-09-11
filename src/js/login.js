@@ -1,3 +1,6 @@
+
+// face scan button
+
 const scanButton = document.getElementById("scan-button");
 
 scanButton.addEventListener("click", () => {
