@@ -311,6 +311,16 @@ button.btn.btn-primary.reserve a:hover {
   text-decoration: none;
   color: grey;
 }
+button#save {
+  border: 2px solid gray;
+  padding: 7px 10px;
+  font-family: "Orbitron", sans-serif;
+  font-size: 18px;
+  transition: 0.3s;
+  height: 43px;
+  border-radius: 2px;
+  background-color: #0f3421;
+}
 button#save:hover {
   color: grey;
   background-color: #d7e9ff;
@@ -358,6 +368,13 @@ button:not(:disabled):hover {
 .box2 {
   padding: 10%;
   align-items: center;
+}
+p.payS2 {
+  font-size: x-small;
+  text-align: justify;
+}
+.row.addPay {
+  margin: 10px;
 }
 .col-leftAdd {
   margin-left: 20px;
@@ -407,6 +424,14 @@ button:not(:disabled):hover {
 }
 input#postal-code {
   width: 100%;
+}
+#postal-code {
+  min-width: 100%;
+  border-radius: 1px;
+  border: 2px solid #020209;
+  background-color: white;
+  text-align: left;
+  color: black;
 }
 input[type="text-area"] {
   box-sizing: border-box;
@@ -781,6 +806,8 @@ p.footText.footRow {
   /*    margin-left: 32%; */
   margin-bottom: 5%;
   font-size: 0.675em;
+  background-color: gray;
+  border-radius: 2px;
 }
 .addPayProgress.progress {
   text-align: right;
@@ -788,11 +815,10 @@ p.footText.footRow {
   padding-bottom: 10px;
   color: white;
 }
-
 .dLicense {
   width: 33%;
   background-color: #0f3320;
-} /* Green */
+} 
 .insurCard {
   width: 66%;
   background-color: #0f3320;
