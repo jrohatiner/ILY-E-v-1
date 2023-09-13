@@ -82,7 +82,6 @@ ul.front-pg {
   background: transparent;
   margin-top: 2.5em;
 }
-
 // license, insurance, addPay
 input[type="file"] {
   display: none;
@@ -117,7 +116,7 @@ button.upIm {
   color: white;
   background-color: #353a3d;
   border: 1px solid #353a3d;
-  border-radius: 6px;
+  border-radius: 2px;
   cursor: pointer;
   text-transform: uppercase;
   padding: 8px;
@@ -145,13 +144,13 @@ button.upIm {
   color: white;
   background-color: #353a3d;
   border: 1px solid #353a3d;
-  border-radius: 6px;
+  border-radius: 2px;
   cursor: pointer;
   text-transform: uppercase;
   padding: 10px;
 }
 #next a {
-  border-radius: 6px;
+  border-radius: 2px;
   text-transform: uppercase;
 }
 #next a:hover {
@@ -204,16 +203,25 @@ button.btn.btn-primary.insureSv {
 }
 button {
   background-color: #353a3d;
-  border: 1px solid #ccc;
+  border: 1px solid #353a3d;
   border-radius: 6px;
   color: white;
   cursor: pointer;
-  // display: block;
-  font-size: 20px; 
-  font-weight: 400;
-  margin: 10px 0 0 0;
-  padding: 10px;
+  text-transform: uppercase;
+  padding: 8px;
 }
+// button {
+//   background-color: #353a3d;
+//   border: 1px solid #ccc;
+//   border-radius: 6px;
+//   color: white;
+//   cursor: pointer;
+//   // display: block;
+//   font-size: 20px; 
+//   font-weight: 400;
+//   margin: 10px 0 0 0;
+//   padding: 10px;
+// }
 .license,
 .insure,
 .addPay {
@@ -250,10 +258,15 @@ button {
 #signup-bckgrd {
   background-color: #020209;
   color: white;
-  width: 50%;
+  width: auto;
 }
 #signingUp {
   margin: 30px 25px;
+}
+.col.resCo {
+  text-align: left;
+  margin-left:50px;
+  margin-bottom: -60px;
 }
 .button2#saved {
   top: 0;
@@ -272,6 +285,32 @@ button {
   padding: 11px;
   margin-top: 25px;
 }
+.image.picRes#tesla {
+  width: 220px;
+  height: 100px;
+}
+.col.alignRes {
+  color: white;
+  text-wrap: nowrap;
+}
+button.btn.btn-primary.reserve {
+  width: 100%;
+  text-transform: uppercase;
+  border-radius: 2px;
+  background-color: #353a3d;
+  // border: 2px solid #4c535d inset;
+  border: 2px rgb(132, 136, 140) solid;
+  padding: 5px 3px;
+  margin: 10px 0 0 0;
+  margin: auto;
+}
+button.btn.btn-primary.reserve a {
+  text-decoration: none;
+}
+button.btn.btn-primary.reserve a:hover {
+  text-decoration: none;
+  color: grey;
+}
 button#save:hover {
   color: grey;
   background-color: #d7e9ff;
@@ -280,10 +319,6 @@ input#username,
 input#password {
     background-color: #008a0e;
     color: white!important;
-}
-button.btn.btn-primary.reserve {
-  background-color: rgb(132, 136, 140);
-  border: 1px rgb(132, 136, 140) solid;
 }
 button#sUp {
   margin-left: 90px;
@@ -322,7 +357,12 @@ button:not(:disabled):hover {
 }
 .box2 {
   padding: 10%;
-  // padding: 20%;
+  align-items: center;
+}
+.col-leftAdd {
+  margin-left: 20px;
+  width: 100%;
+  margin-top: 20px;
 }
 .signupBox {
   width: 65px;
@@ -354,7 +394,8 @@ button:not(:disabled):hover {
   text-align: center;
 }
 .box3 {
-  margin-top: 50px;
+  margin-bottom: 50px;
+  // margin-top: 50px;
   text-align: center;
 }
 .lPlus {
@@ -366,6 +407,9 @@ button:not(:disabled):hover {
 }
 input#postal-code {
   width: 100%;
+}
+input[type="text-area"] {
+  box-sizing: border-box;
 }
 textarea {
   border: 1px solid #ccc;
@@ -393,8 +437,9 @@ form section:last-of-type {
 }
 label {
   display: block;
-  font-size: var(--large-mobile-font-size);
-  font-weight: 400;
+  font-weight: inherit;
+  text-wrap: nowrap;
+  font-size: 0.675em;
   margin: 0 0 1px 0;
 }
 div#exp-month-year {
@@ -407,15 +452,64 @@ section#cc-exp-csc {
 section#cc-exp-csc div:not(:last-child) {
   margin: 0 10px 0 0;
 }
-
-
-
-
-
-
-
-
-
+// vehicle modal
+h2.topRes {
+  text-align: center;
+}
+h4.headReserv {
+  text-align: center;
+}
+.row.resTes {
+  margin-top: 0;
+}
+p.vRangeVrate {
+  line-height: 1;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+}
+.col.alignRes {
+  color: white;
+  text-wrap: nowrap;
+}
+span.vMod {
+  color: #12691b;
+  text-transform: uppercase;
+  font-weight: bolder;
+  text-wrap: nowrap;
+  text-align: center;
+}
+span.vMod1 {
+  color: #12691b;
+  text-transform: uppercase;
+  font-weight: bolder;
+  text-wrap: nowrap;
+  text-align: center;
+}
+span.rightTopText {
+  color: #12691b;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-wrap: nowrap;
+  text-align: center;
+  font-size: x-small;
+  float: right;
+  line-height: 3;
+  margin-top: 15px;
+  margin-right: -20px;
+}
+.smTopText {
+  font-size: x-small;
+  float: left;
+  line-height: 1;
+}
+.gap-3.topTextVM {
+  float: left;
+}
+.row.align-items-center.topTextRes {
+  margin-top: 10px;
+}
 // end sign-up page styles inside modal
 
 ul.front-pg li.frt-pg {
@@ -590,17 +684,24 @@ p.footText {
   margin-top: 4.25rem;
 }
 input {
-text-align:center;
-border-radius: 10px;
-padding: 10px 5px;
-background-color: #008a0e;
-color: white !important;
-max-width: 50%;
-font-size: var(--large-mobile-font-size);
+  border: 1px solid #ccc;
+  padding: 12px;
+  width: 100%;
+  width: calc(100% - 30px); 
 }
+
+// input {
+// text-align:center;
+// border-radius: 10px;
+// padding: 10px 5px;
+// background-color: #008a0e;
+// color: white !important;
+// max-width: 50%;
+// font-size: var(--large-mobile-font-size);
+// }
 input:not(:focus):invalid {
   color: red;
-  outline-color: red;
+  outline-color: transparent;
 }
 .mTop {
   margin-top: 10px;
@@ -674,6 +775,56 @@ p.park {
 }
 p.footText.footRow {
   padding: 25px;
+}
+/* progress bar */
+.container.progress {
+  /*    margin-left: 32%; */
+  margin-bottom: 5%;
+  font-size: 0.675em;
+}
+.addPayProgress.progress {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.dLicense {
+  width: 33%;
+  background-color: #0f3320;
+} /* Green */
+.insurCard {
+  width: 66%;
+  background-color: #0f3320;
+}
+.payAdd {
+  width: 100%;
+  background-color: #0f3320;
+}
+/* dialog background */
+
+#addCard-bckgrd {
+  font-family: "Orbitron", sans-serif;
+  background-color: #020209;
+  color: white;
+  padding: 10px;
+}
+input#addCard4 {
+  max-width: 45%;
+  margin-left: 3px;
+}
+input#addCard3 {
+  max-width: 45%;
+  float: left;
+  margin-right: 1px;
+}
+dialog#addCard-bckgrd {
+  width: 50%;
+}
+p.signText {
+  margin-bottom: 0.5em;
+  text-align: center;
+  text-wrap: nowrap;
 }
 @media all and (max-width: 578px) {
   .col-span-1,

@@ -15,167 +15,16 @@
  <script src="main.js"></script>
 </head>
 <style>
-  /* new styles */
-
-.image.picRes#tesla {
-   width: 220px;
-   height: 100px;
-}
-.col.alignRes {
-   color: white;
-   text-wrap: nowrap;
-}
-button.btn.btn-primary.reserve {
-   width: 100%;
-   text-transform: uppercase;
-   border-radius: 2px;
-   background-color: #353a3d;
-   border: 2px solid #4c535d inset;
-   padding: 5px 3px;
-   margin: 10px 0 0 0;
-   margin: auto;
-}
-button.btn.btn-primary.reserve a {
-   text-decoration: none;
-}
-button.btn.btn-primary.reserve a:hover {
-   text-decoration: none;
-   color: grey;
-}
-#next {
-   float: right;
-   text-decoration: none;
-   color: white;
-   background-color: #353a3d;
-   border: 1px solid #353a3d;
-   border-radius: 4px;
-   cursor: pointer;
-   text-transform: uppercase;
-   padding: 10px;
-}
-#next a {
-   border-radius: 4px;
-   text-transform: uppercase;
-}
-#next a:hover {
-   text-decoration: none;
-   padding: 10px;
-}
-span.rightTopText {
-   color: #12691b;
-   text-transform: uppercase;
-   font-weight: bold;
-   text-wrap: nowrap;
-   text-align: center;
-   font-size: x-small;
-   float: right;
-   line-height: 3;
-   margin-top: 15px;
-   margin-right: -20px;
-}
-.smTopText {
-   font-size: x-small;
-   float: left;
-   line-height: 1;
-}
-.gap-3.topTextVM {
-   float: left;
-}
-.box3 {
-   margin-top: 50px;
-   text-align: center;
-}
-h2.topRes {
-   text-align: center;
-}
-h4.headReserv {
-   text-align: center;
-}
-.row.resTes {
-   margin-top: 0;
-}
-p.vRangeVrate {
-   line-height: 1;
-   margin-bottom: 30px;
-   text-align: center;
-   text-transform: uppercase;
-   text-wrap: nowrap;
-}
-.col.alignRes {
-   color: white;
-   text-wrap: nowrap;
-}
-span.vMod {
-   color: #12691b;
-   text-transform: uppercase;
-   font-weight: bolder;
-   text-wrap: nowrap;
-   text-align: center;
-}
-span.vMod1 {
-   color: #12691b;
-   text-transform: uppercase;
-   font-weight: bolder;
-   text-wrap: nowrap;
-   text-align: center;
-}
-
-.row.align-items-center.topTextRes {
-   margin-top: 10px;
-}
-/* new styles end */
-
-/* dialog background */
-
-#signup-bckgrd {
-   background-color: #020209;
-   color: white;
-   width: 50%;
-}
-#next {
-   float: right;
-   text-decoration: none;
-   color: white;
-   background-color: #353a3d;
-   border: 1px solid #353a3d;
-   border-radius: 6px;
-   cursor: pointer;
-   text-transform: uppercase;
-   padding: 10px;
-}
-#next a {
-   border-radius: 6px;
-   text-transform: uppercase;
-}
-#next a:hover {
-   text-decoration: none;
-   padding: 10px;
-}
-#close {
-   text-decoration: none;
-   color: white;
-   background-color: #353a3d;
-   border: 1px solid #353a3d;
-   border-radius: 6px;
-   cursor: pointer;
-   text-transform: uppercase;
-   padding: 8px;
-}
-#close a:hover {
-   text-decoration: none;
-}
-/* end new styles */
 </style>
 <body id="map">
-  <div class="container">
-  
+  <div class="container" id="signingUp">
 <div class="box">
 <img class="image high-quality" id="car" src="https://assets.codepen.io/460875/tesla-model-3.png" alt="car" width="60" height="40"/>
 </div>
 <button type="button" class="btn btn-link" id="sUp" style="color:black;" data-bs-toggle="modal" data-bs-target="#vehicleDisplayModal">
 <img class="image high-quality" id="car" src="https://assets.codepen.io/460875/tesla-model-3.png" alt="car" width="60" height="40"/>
 </button> 
-
+  </div>
 <dialog id="signup-bckgrd">
   <title>Vehicles</title>
   <div class="row row-cols-4">
@@ -196,10 +45,8 @@ span.vMod1 {
   <div class="box3">
      <h2 class="topRes">2023 <br>Tesla Model 3</h2>
      <div class="col">
-        <div>
            <div class="col resCo">
               NC <br>TSL-9923
-           </div>
         </div>
      </div>
      <div class="row center">
@@ -252,7 +99,7 @@ span.vMod1 {
   <script src="js/main.js"></script>
   <script src="/js/dialog.js"></script>
   <script src="js/main.js"></script>
-  <script src="/js/save.js"></script> -->
+  <script src="/js/save.js"></script>
 <!-- keeps modal default state open onload -->
 <script>
 document.addEventListener('DOMContentLoaded', function () {

@@ -187,7 +187,7 @@ textarea {
 <body>
 <div class="container" id="signingUp">
 
-<button class="btn btn-primary" id="show">SIGN-UP</button>
+<button class="btn btn-primary visually-hidden" id="show">SIGN-UP</button>
 <dialog id="signup-bckgrd">
    <title>SIGN-UP</title>
    <div class="box">
@@ -229,13 +229,11 @@ textarea {
 </div>
 </div>
 </div>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  var modal = new Modal(document.getElementById('signup-bckgrd'));
-  modal.show();
-});
-</script>
-
-<script src="https://kit.fontawesome.com/4500d8ef13.js" crossorigin="anonymous"></script>
+<script src="/js/insure.js"></script>
+  <script src="/js/progress.js"></script>
+  <script src="js/main.js"></script>
+  <script src="/js/dialog.js"></script>
+  <script src="/js/save.js"></script>
+<!-- <script src="https://kit.fontawesome.com/4500d8ef13.js" crossorigin="anonymous"></script> -->
 </body>
 </html>
