@@ -14,7 +14,158 @@
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
  <script src="main.js"></script>
 </head>
+<style>
+  /* new styles */
 
+.image.picRes#tesla {
+   width: 220px;
+   height: 100px;
+}
+.col.alignRes {
+   color: white;
+   text-wrap: nowrap;
+}
+button.btn.btn-primary.reserve {
+   width: 100%;
+   text-transform: uppercase;
+   border-radius: 2px;
+   background-color: #353a3d;
+   border: 2px solid #4c535d inset;
+   padding: 5px 3px;
+   margin: 10px 0 0 0;
+   margin: auto;
+}
+button.btn.btn-primary.reserve a {
+   text-decoration: none;
+}
+button.btn.btn-primary.reserve a:hover {
+   text-decoration: none;
+   color: grey;
+}
+#next {
+   float: right;
+   text-decoration: none;
+   color: white;
+   background-color: #353a3d;
+   border: 1px solid #353a3d;
+   border-radius: 4px;
+   cursor: pointer;
+   text-transform: uppercase;
+   padding: 10px;
+}
+#next a {
+   border-radius: 4px;
+   text-transform: uppercase;
+}
+#next a:hover {
+   text-decoration: none;
+   padding: 10px;
+}
+span.rightTopText {
+   color: #12691b;
+   text-transform: uppercase;
+   font-weight: bold;
+   text-wrap: nowrap;
+   text-align: center;
+   font-size: x-small;
+   float: right;
+   line-height: 3;
+   margin-top: 15px;
+   margin-right: -20px;
+}
+.smTopText {
+   font-size: x-small;
+   float: left;
+   line-height: 1;
+}
+.gap-3.topTextVM {
+   float: left;
+}
+.box3 {
+   margin-top: 50px;
+   text-align: center;
+}
+h2.topRes {
+   text-align: center;
+}
+h4.headReserv {
+   text-align: center;
+}
+.row.resTes {
+   margin-top: 0;
+}
+p.vRangeVrate {
+   line-height: 1;
+   margin-bottom: 30px;
+   text-align: center;
+   text-transform: uppercase;
+   text-wrap: nowrap;
+}
+.col.alignRes {
+   color: white;
+   text-wrap: nowrap;
+}
+span.vMod {
+   color: #12691b;
+   text-transform: uppercase;
+   font-weight: bolder;
+   text-wrap: nowrap;
+   text-align: center;
+}
+span.vMod1 {
+   color: #12691b;
+   text-transform: uppercase;
+   font-weight: bolder;
+   text-wrap: nowrap;
+   text-align: center;
+}
+
+.row.align-items-center.topTextRes {
+   margin-top: 10px;
+}
+/* new styles end */
+
+/* dialog background */
+
+#signup-bckgrd {
+   background-color: #020209;
+   color: white;
+   width: 50%;
+}
+#next {
+   float: right;
+   text-decoration: none;
+   color: white;
+   background-color: #353a3d;
+   border: 1px solid #353a3d;
+   border-radius: 6px;
+   cursor: pointer;
+   text-transform: uppercase;
+   padding: 10px;
+}
+#next a {
+   border-radius: 6px;
+   text-transform: uppercase;
+}
+#next a:hover {
+   text-decoration: none;
+   padding: 10px;
+}
+#close {
+   text-decoration: none;
+   color: white;
+   background-color: #353a3d;
+   border: 1px solid #353a3d;
+   border-radius: 6px;
+   cursor: pointer;
+   text-transform: uppercase;
+   padding: 8px;
+}
+#close a:hover {
+   text-decoration: none;
+}
+/* end new styles */
+</style>
 <body id="map">
   <div class="container">
   
@@ -25,66 +176,83 @@
 <img class="image high-quality" id="car" src="https://assets.codepen.io/460875/tesla-model-3.png" alt="car" width="60" height="40"/>
 </button> 
 
-<!-- Modal -->
-<div class="modal fade in" id="vehicleDisplayModal" tabindex="-1" aria-labelledby="vehicleDisplayModLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="vehicleDisplayMod"></h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-      
-      <div class="row">
-      <div class="col-md-4">Username here</div>
-      <div class="col-md-4 col-md-offset-4"><h5>2023 Tesla Model 3</h5></div>
-    
-    <div class="col-md-4">NC <br>TSL-9923
-    </div>
-      <div class="col-md-3 col-md-offset-3"><img class="image high-quality" id="tesla" src="https://assets.codepen.io/460875/tesla-model-3.png" alt="tesla" width="200" height="75" /></div>
-      <div class="col-md-2 col-md-offset-4"><h3>vehicle range 236 miles</h3><p>vehicle rating: 4.98 (369 reviews)</p></div>
-  
-    <div class="col-md-4">First 2 hours free</div><button class="btn btn-primary reserve">
-    <a href="reserve.html" style="color:white;">reserve</a>
-  </button>
-      <div class="col-md-6 col-md-offset-3"><h3>DAILY RENTAL</h3><p>24 HOURS  | UNLIMITED MILES</p>
-        <button class="btn btn-primary reserve">
-        <a href="#" style="color:white;">reserve</a>
-      </button></div>
-      <div class="col-md-4">STUFF</div>
-      <div class="col-md-6 col-md-offset-3">.col-md-6 .col-md-offset-3</div>
+<dialog id="signup-bckgrd">
+  <title>Vehicles</title>
+  <div class="row row-cols-4">
+     <div class="col-4">
+        <p class="gap-3 topTextVM">
+           USERNAME
+           <span class="smTopText">YOUR EV AWAITS</span>
+     </div>
+     <div class="col"></div>
+     <div class="col-4">
+        <i class="fa-solid fa-xmark" style="color: #ffffff;float:right;"></i>
+        <span class="rightTopText">.01 miles away</span>
+        </p>
+     </div>
   </div>
-</div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-        <!-- <button type="submit" class="btn btn-primary">RESERVE</button> -->
-      </div>
-    </div>
+
+  <!--       begin box3 -->
+  <div class="box3">
+     <h2 class="topRes">2023 <br>Tesla Model 3</h2>
+     <div class="col">
+        <div>
+           <div class="col resCo">
+              NC <br>TSL-9923
+           </div>
+        </div>
+     </div>
+     <div class="row center">
+        <img class="image picRes" id="tesla" src="https://assets.codepen.io/460875/tesla-model-3.png" alt="tesla" width="" height="" />
+        <p class="vRangeVrate">vehicle range <span class="vMod">236 miles</span><br>
+           vehicle rating: 4.98 (369 reviews)</p>
+     </div>
+     <div class="row center">
+        <div class="col-8 align-self-center">
+           First 2 hours <span class="vMod">free</span>
+           <button class="btn btn-primary reserve">
+              <a href="reserve.html" style="color:white;">reserve</a>
+           </button>
+           <h4 class="headReserv">DAILY RENTAL</h4>
+           <span class="vMod1">24 HOURS | UNLIMITED MILES</span>
+
+           <button type="submit" class="btn btn-primary reserve">RESERVE<br>$100</button>
+        </div>
+     </div>
   </div>
+  <!--       end box3 -->
+
+  <button id="close">Cancel</button>
+  <button id="next" href="/reserve.html">NEXT</button>
 </div>
-  <!-- END MODAL CODE -->
-  
+</div>
+</dialog>
+</div>
+</div>
   <div class="fixed-bottom">
  <div class="row">
 <div class="col col-span-8">
-
-    <!-- to be removed -->
+   <!-- to be removed -->
     <ul class="bottomMenu">
     <li><a href="index.html">home</a></li>
     <li><a href="login.html">login</a></li>
     <li><a href="vehicleModal.html">vehicle modal page</a></li>
-    <li><a href="new-sign-up.html">SignUp Modal</a></li>
+    <li><a href="sign-up.html">SignUp Modal</a></li>
     <li><a href="energy.html">energy</a></li>
     <li><a href="express.html">express</a></li>
     <li><a href="info.html">info</a></li>
   </ul>
-    <!-- end menu remove -->
-  
+    <!-- end menu remove  -->
 </div>
 </div>
   </div>
 </div>
 </div>
+<script src="/js/progress.js"></script>
+  <script src="js/main.js"></script>
+  <script src="/js/dialog.js"></script>
+  <script src="js/main.js"></script>
+  <script src="/js/save.js"></script> -->
 <!-- keeps modal default state open onload -->
 <script>
 document.addEventListener('DOMContentLoaded', function () {
