@@ -93,6 +93,18 @@ button.upIm {
   border: none;
   background-color:#020209;
 }
+input[type="file"] {
+  display: none;
+}
+#preview {
+  margin-bottom: 10px;
+}
+#upIm {
+  border: none;
+}
+#preview img {
+   max-width: 75%;
+}
 /* the custom button on insurance pg */
 .custom-upload-button {
   background-color: transparent;
@@ -101,6 +113,7 @@ button.upIm {
   border: none;
   cursor: pointer;
 }
+/* end custom button on insurance pg */
 .topText {
   text-align: center;
 }
@@ -191,9 +204,6 @@ button.btn.btn-primary.licenseSv:hover {
 }
 button.btn.btn-primary.insureSv {
   min-width: 100%;
-  // background-color: #353a3d;
-  // border: 2px solid gray;
-  // padding: 7px 10px;
   font-family: "Orbitron", sans-serif;
   font-size: 18px;
   transition: 0.3s;
@@ -210,18 +220,6 @@ button {
   text-transform: uppercase;
   padding: 8px;
 }
-// button {
-//   background-color: #353a3d;
-//   border: 1px solid #ccc;
-//   border-radius: 6px;
-//   color: white;
-//   cursor: pointer;
-//   // display: block;
-//   font-size: 20px; 
-//   font-weight: 400;
-//   margin: 10px 0 0 0;
-//   padding: 10px;
-// }
 .license,
 .insure,
 .addPay {
@@ -259,6 +257,7 @@ button {
   background-color: #020209;
   color: white;
   width: auto;
+  top: 0;
 }
 #signingUp {
   margin: 30px 25px;
@@ -298,10 +297,9 @@ button.btn.btn-primary.reserve {
   text-transform: uppercase;
   border-radius: 2px;
   background-color: #353a3d;
-  // border: 2px solid #4c535d inset;
-  border: 2px rgb(132, 136, 140) solid;
+  border-color: #4c535d;
   padding: 5px 3px;
-  margin: 10px 0 0 0;
+  // margin: 10px 0 0 0;
   margin: auto;
 }
 button.btn.btn-primary.reserve a {
@@ -801,13 +799,26 @@ p.park {
 p.footText.footRow {
   padding: 25px;
 }
+/*insurance page */
+.row.align-items-center {
+  margin-top: -5px;
+}
+.addPayProgress.insureCard {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+img#uploadedImage {
+  max-width: 250px!important;
+  max-height: 175px!important;
+}
 /* progress bar */
 .container.progress {
-  /*    margin-left: 32%; */
   margin-bottom: 5%;
   font-size: 0.675em;
-  background-color: gray;
   border-radius: 2px;
+  background-color: #ddd;
 }
 .addPayProgress.progress {
   text-align: right;

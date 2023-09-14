@@ -1,16 +1,6 @@
-// let save = document.querySelector("save");
-// document.getElementById("save").addEventListener("click", myTra);
-// function myTra() {
-//    alert("SAVED!");
-// }
 let dialog = document.querySelector("dialog");
-
-// document.querySelector("#close").onclick = function () {
-//    dialog.close();
-// };
-
 document.addEventListener("DOMContentLoaded", function () {
-   const dialog = document.getElementById("addCard-bckgrd");
+   const dialog = document.getElementById("signup-bckgrd");
    dialog.showModal();
 });
 function myTra() {

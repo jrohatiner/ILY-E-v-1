@@ -9,6 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // close click anywhere
 
-document.querySelector("#signup-bckgrd").onclick = function () {
-  dialog.close();
-};
+// document.querySelector("#signup-bckgrd").onclick = function () {
+//   dialog.close();
+// };
