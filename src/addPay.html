@@ -22,38 +22,6 @@
 <script src="main.js"></script>
 </head>
 <style>
-/* dialog background */
-
-#signup-bckgrd {
-   font-family: "Orbitron", sans-serif;
-   background-color: #020209;
-   color: white;
-}
-dialog#signup-bckgrd {
-   width: 50%;
-}
-p.signText {
-   margin-bottom: 2em;
-   text-align: center;
-   text-wrap: nowrap;
-}
-button {
-   background-color: #353a3d;
-   border: 1px solid #353a3d;
-   border-radius: 6px;
-   color: white;
-   cursor: pointer;
-   text-transform: uppercase;
-   padding: 8px;
-}
-button:disabled {
-   color: #888;
-   cursor: default;
-}
-button:not(:disabled):hover {
-   background-color: #0f3320;
-   color: white;
-}
 .box {
    width: 65px;
    height: 60px;
@@ -67,46 +35,18 @@ button:not(:disabled):hover {
 .box2 {
    align-items: center;
 }
-.col-leftCk {
+ .col-leftCk {
    float: left;
    width: 50%;
    margin-top: 20px;
 }
-.col-rgtLab {
+ .col-rgtLab {
    float: left;
    width: 50%;
    margin-top: 15px;
    margin-bottom: 1em;
    margin-left: -40px;
-}
-/* Clear floats after the columns */
-.row::after {
-   content: "";
-   display: table;
-   clear: both;
-}
-input {
-   border: 1px solid #ccc;
-   padding: 12px;
-   width: 100%;
-   width: calc(100% - 30px); /* full width minus padding */
-}
-input[type="checkbox"]#cCard1 {
-   box-sizing: border-box;
-}
-input:not(:focus):invalid {
-   color: red;
-   outline-color: green;
-}
-label {
-   display: inline-block;
-   font-size: 0.675em;
-   text-wrap: nowrap;
-   margin: 0 0 1px 0;
-}
-#next {
-   float: right;
-}
+} 
 </style>
 
 

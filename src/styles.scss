@@ -21,6 +21,12 @@ body#map {
   background-position: center;
   background-size: cover;
 }
+dialog#signup-bckgrd {
+  border: none;
+}
+dialog#addCard-bckgrd {
+  border: none;
+}
 h1.VehiclesLoading {
   text-align: center;
   padding: 30px;
@@ -64,17 +70,19 @@ ul.front-pg {
 .modal-header {
   border:none;
 }
-.modal-content {
-  background-color: rgb(57,57,57);
+// .modal-content {
+//   background-color: rgb(57,57,57);
+// }
+// .modal-body {
+//   color: white;
+//   border: none;
+// }
+// .modal-footer {
+//     border: none;
+// }
+dialog#signup-bckgrd {
+  max-width: 50%;
 }
-.modal-body {
-  color: white;
-  border: none;
-}
-.modal-footer {
-    border: none;
-}
-
 // sign-up and reserve pages styles inside modal
 
 // progress bar
@@ -257,7 +265,7 @@ button {
   background-color: #020209;
   color: white;
   width: auto;
-  top: 0;
+  top: 10%;
 }
 #signingUp {
   margin: 30px 25px;
@@ -318,6 +326,7 @@ button#save {
   height: 43px;
   border-radius: 2px;
   background-color: #0f3421;
+  margin: auto;
 }
 button#save:hover {
   color: grey;
@@ -845,6 +854,9 @@ img#uploadedImage {
   background-color: #020209;
   color: white;
   padding: 10px;
+  width: auto;
+  max-width: 50%;
+  top: 10%;
 }
 input#addCard4 {
   max-width: 45%;

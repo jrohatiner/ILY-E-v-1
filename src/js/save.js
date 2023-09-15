@@ -1,4 +1,5 @@
-let dialog = document.querySelector("dialog");
+// let dialog = document.querySelector("dialog");
+
 document.addEventListener("DOMContentLoaded", function () {
    const dialog = document.getElementById("signup-bckgrd");
    dialog.showModal();
