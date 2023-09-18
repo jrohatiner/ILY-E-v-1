@@ -22,6 +22,13 @@
 <script src="main.js"></script>
 </head>
 <style>
+   td {
+    text-align: left;
+    text-transform: uppercase;
+}
+span.addMod {
+   color: #fcce15;
+}
 </style>
 <body>
 <div class="container" id="signingUp">
@@ -29,20 +36,46 @@
   <!--    <button id="close">X</button> -->
   <dialog open id="signup-bckgrd">
      <title>AddOns</title>
-     <p class="gap-3 topText">
-       AddOns
-     </p>
-     <div class="licensebox">
-        <i class="fa-thin fa-id-card fa-xl" style="color: #183152;margin-top: 15px;"></i><br>
-        <i class="fa-thin fa-id-card fa-2xl" style="color: #183152;margin-top: 15px;font-size:34px;"></i>
-     </div>
+     <!-- <p class="gap-3 topText">
+      
+     </p> -->
+     <p class="signText"> AddOns
+     <i class="fa-solid fa-xmark" style="color: #ffffff;float:right;"></i>
+  </p>
 
      <!--       begin box3 -->
      <div class="box3">
         <div class="row justify-content-center">
            <div class="col">
               <div class="row align-items-center justify-content-evenly">
-                 
+              <section>
+             <p>needs two row table with three data cols</p>
+              <p>AddOn toggle here and text</p>
+           </section>
+           <section>
+              <label for=""></label>
+              <p>AddOn toggle here and text</p>
+           </section>
+           <section>
+           <table style="width:100%">
+           <tr>
+             <td>EV RENTAL | 2023 TESLA MODEL 3 </td>
+             <td><span class="vMod"> FREE</span></td>
+           </tr>
+           <tr>
+             <td>AD-ONS | <span class="addMod">+ SPEED</span></td>
+             <td><span class="addMod">$10</span></td>
+           </tr>
+           <tr>
+             <td><span class="addMod">no window ads</span></td>
+             <td><span class="addMod">$1</span></td>
+           </tr>
+           <tr>
+             <td>total</td>
+             <td><span class="addMod">$11</span></td>
+           </tr>
+         </table>
+           </section>
            </div>
         </div>
      </div>
@@ -50,34 +83,29 @@
      <!--       end box3 -->
 
      <div class="box2">
-        <section>
-           <label for=""></label>
-           <p>AddOns</p>
-        </section>
-        <section>
-           <label for=""></label>
-           <p>AddOns</p>
-        </section>
+        
         <section>
 
-           <button class="btn btn-primary licenseSv" id="save" onClick="myTra()" type="button">SAVE
+           <button class="btn btn-primary licenseSv" id="save" onClick="myTra()" type="button">Confirm and pay<br>face scan icon here
            </button><button id="saved" class="button2"></button>
         </section>
 
         <!-- <button id="close">Cancel</button> -->
         <button class="btn btn-secondary" id="close" onClick="myDialog()" type="button">Cancel</button>
-        <button class="btn btn-secondary" id="next"> <a href="insurance.html">NEXT</a></button>
+        <!-- <button class="btn btn-secondary disabled" id="next"> <a href="insurance.html"></a></button> -->
        
      </div>
 </div>
 </div>
 </div>
 </dialog>
-<!-- <div class="fixed-bottom">
+
+        
+<div class="fixed-bottom">
   <div class="row">
   <div class="col col-span-8">
-        to be removed
-        <ul class="bottomMenu">
+        <!-- to be removed -->
+        <!-- <ul class="bottomMenu">
         <li><a href="index.html">home</a></li>
         <li><a href="login.html">login</a></li>
         <li><a href="vehicleModal.html">the real vehicle modal page</a></li>
@@ -86,68 +114,17 @@
         <li><a href="energy.html">energy</a></li>
         <li><a href="express.html">express</a></li>
         <li><a href="info.html">info</a></li>
-      </ul>
-       end menu remove 
+      </ul> -->
+       <!-- end menu remove  -->
       <p class="footText footRow">
-    By proceeding you agree to ILY-E <a class="footLinks" href="#">terms of use</a> and our <a class="footLinks" href="#">privacy policy</a></p>
+    By proceeding you agree to ILY-E <a class="footLinks" href="#">terms of use</a> and our <a class="footLinks" href="privacy.html">privacy policy</a></p>
   </div>
   </div>
-  </div> -->
+  </div>
 </div>
 </div>
 <script src="js/main.js"></script>
-<script src="/js/insure.js"></script>
 <script src="/js/save.js"></script>
-<script src="/js/progress.js"></script>
 <script src="/js/dialog.js"></script>
-<script src="https://kit.fontawesome.com/4500d8ef13.js" crossorigin="anonymous"></script>
-</body>
-</html>
-        </section>
-        <section>
-           <label for="postal-code"></label>
-           <input id="postal-code" name="postal-code" autocomplete="postal-code" maxlength="20" placeholder="Postal Code">
-        </section>
-        <section>
-
-           <button class="btn btn-primary licenseSv" id="save" onClick="myTra()" type="button">SAVE
-           </button><button id="saved" class="button2"></button>
-        </section>
-
-        <!-- <button id="close">Cancel</button> -->
-        <button class="btn btn-secondary" id="close" onClick="myDialog()" type="button">Cancel</button>
-        <button class="btn btn-secondary" id="next"> <a href="insurance.html">NEXT</a></button>
-       
-     </div>
-</div>
-</dialog>
-<!-- <div class="fixed-bottom">
-  <div class="row">
-  <div class="col col-span-8">
-        to be removed
-        <ul class="bottomMenu">
-        <li><a href="index.html">home</a></li>
-        <li><a href="login.html">login</a></li>
-        <li><a href="vehicleModal.html">the real vehicle modal page</a></li>
-        <li><a href="sign-up.html">SignUp Modal</a></li>
-        <li><a href="sign-up-checked.html">3 circle checks</a></li>
-        <li><a href="energy.html">energy</a></li>
-        <li><a href="express.html">express</a></li>
-        <li><a href="info.html">info</a></li>
-      </ul>
-       end menu remove 
-      <p class="footText footRow">
-    By proceeding you agree to ILY-E <a class="footLinks" href="#">terms of use</a> and our <a class="footLinks" href="#">privacy policy</a></p>
-  </div>
-  </div>
-  </div> -->
-</div>
-</div>
-<script src="js/main.js"></script>
-<script src="/js/insure.js"></script>
-<script src="/js/save.js"></script>
-<script src="/js/progress.js"></script>
-<script src="/js/dialog.js"></script>
-<script src="https://kit.fontawesome.com/4500d8ef13.js" crossorigin="anonymous"></script>
 </body>
 </html>

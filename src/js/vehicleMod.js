@@ -1,8 +1,8 @@
-let dialog = document.querySelector("dialog");
-document.addEventListener("DOMContentLoaded", function () {
-   const dialog = document.getElementById("signup-bckgrd");
-   dialog.showModal();
-});
+// let dialog = document.querySelector("dialog");
+// document.addEventListener("DOMContentLoaded", function () {
+//    const dialog = document.getElementById("signup-bckgrd");
+//    dialog.showModal();
+// });
 
 // document.querySelector("#signup-bckgrd").onclick = function () {
 //    dialog.close();

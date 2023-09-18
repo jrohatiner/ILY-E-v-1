@@ -12,7 +12,7 @@ body {
   height: 100vh;
 }
 body#map {
-  background: transparent;
+  // background: transparent;
   margin: 0;
   padding: 0;
   font-family: 'Orbitron', sans-serif;
@@ -70,19 +70,7 @@ ul.front-pg {
 .modal-header {
   border:none;
 }
-// .modal-content {
-//   background-color: rgb(57,57,57);
-// }
-// .modal-body {
-//   color: white;
-//   border: none;
-// }
-// .modal-footer {
-//     border: none;
-// }
-dialog#signup-bckgrd {
-  max-width: 50%;
-}
+
 // sign-up and reserve pages styles inside modal
 
 // progress bar
@@ -270,6 +258,9 @@ button {
 #signingUp {
   margin: 30px 25px;
 }
+.resCo {
+  float: left;
+}
 .col.resCo {
   text-align: left;
   margin-left:50px;
@@ -296,10 +287,6 @@ button {
   width: 220px;
   height: 100px;
 }
-.col.alignRes {
-  color: white;
-  text-wrap: nowrap;
-}
 button.btn.btn-primary.reserve {
   width: 100%;
   text-transform: uppercase;
@@ -307,8 +294,7 @@ button.btn.btn-primary.reserve {
   background-color: #353a3d;
   border-color: #4c535d;
   padding: 5px 3px;
-  // margin: 10px 0 0 0;
-  margin: auto;
+   margin: 10px 0 0 0;
 }
 button.btn.btn-primary.reserve a {
   text-decoration: none;
@@ -356,7 +342,12 @@ button:not(:disabled):hover {
   font-weight: bolder;
   text-decoration: none;
 }
-.box {
+.box5 {
+  background-image: url("https://assets.codepen.io/460875/tesla-model-3.png");
+  background-repeat: no-repeat;
+}
+
+.box.vehicle {
   background-image: url('https://assets.codepen.io/460875/tesla-model-3.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -376,6 +367,18 @@ button:not(:disabled):hover {
   padding: 10%;
   align-items: center;
 }
+.col-leftCk {
+  float: left;
+  width: 50%;
+  margin-top: 20px;
+}
+.col-rgtLab {
+  float: left;
+  width: 50%;
+  margin-top: 15px;
+  margin-bottom: 1em;
+  margin-left: -40px;
+} 
 p.payS2 {
   font-size: x-small;
   text-align: justify;
@@ -417,9 +420,18 @@ p.payS2 {
 .topText {
   text-align: center;
 }
+.box {
+  width: 65px;
+  height: 60px;
+  background-color: #fff;
+  border: 1px black solid;
+  text-align: center;
+  border-radius: 50%;
+  padding: 8px 5px 5px 1px;
+  margin: auto;
+}
 .box3 {
-  margin-bottom: 50px;
-  // margin-top: 50px;
+  // margin-bottom: 50px;
   text-align: center;
 }
 .lPlus {
@@ -713,7 +725,10 @@ p.footText {
   font-weight: bold;
 }
 .row {
-  margin-top: 4.25rem;
+  margin-top: 2rem;
+}
+div#btnCo {
+  margin-bottom: 3rem;
 }
 input {
   border: 1px solid #ccc;
