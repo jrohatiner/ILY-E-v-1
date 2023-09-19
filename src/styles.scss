@@ -27,6 +27,13 @@ dialog#signup-bckgrd {
 dialog#addCard-bckgrd {
   border: none;
 }
+
+p.addPayText {
+  margin-bottom: 4.5em;
+  text-align: center;
+  text-wrap: nowrap;
+  text-transform: uppercase;
+  }
 h1.VehiclesLoading {
   text-align: center;
   padding: 30px;
@@ -184,7 +191,6 @@ button.btn.btn-primary.licenseSv {
   min-width: 100%;
   margin-top: 50px;
   margin-bottom: 50px;
-  // background-color: #353a3d;
   border: 2px solid gray;
   padding: 7px 10px;
   font-family: "Orbitron", sans-serif;
@@ -375,16 +381,13 @@ button:not(:disabled):hover {
 .col-rgtLab {
   float: left;
   width: 50%;
-  margin-top: 15px;
+  margin-top: 23px;
   margin-bottom: 1em;
-  margin-left: -40px;
+  // margin-left: -40px;
 } 
 p.payS2 {
   font-size: x-small;
   text-align: justify;
-}
-.row.addPay {
-  margin: 10px;
 }
 .col-leftAdd {
   margin-left: 20px;
@@ -422,12 +425,12 @@ p.payS2 {
 }
 .box {
   width: 65px;
-  height: 60px;
+  height: 65px;
   background-color: #fff;
   border: 1px black solid;
   text-align: center;
   border-radius: 50%;
-  padding: 8px 5px 5px 1px;
+  // padding: 8px 5px 5px 1px;
   margin: auto;
 }
 .box3 {
@@ -578,15 +581,13 @@ button.btn.btn-primary:hover {
   text-decoration: none;
   display: inline-block;
   // width: 30%;
-  padding: 5px 3px;
+  // padding: 5px 3px;
   border: 1 px solid #008a0e;
 }
-
 a {
   text-decoration: none;
   color: white;
 }
-
 // loader animation styles
 #loader {
   position: absolute;
@@ -623,6 +624,130 @@ a {
   to{ bottom:0; opacity:1 }
 }
 // end loader animation styles
+
+//addOns page
+td {
+  text-align: left;
+  text-transform: uppercase;
+}
+span.addMod {
+ color: #fcce15;
+}
+.ao {
+ padding: 5px 10px;
+ margin: 20px;
+}
+button.btn.btn-primary.addOnsSv {
+min-width: 100%;
+margin-top: 50px;
+margin-bottom: 50px;
+border: 2px solid gray;
+padding: 7px 10px;
+font-family: "Orbitron", sans-serif;
+font-size: 18px;
+transition: 0.3s;
+height: 43px;
+border-radius: 4px;
+background-color: #0f3421;
+}
+button.btn.btn-primary.addOnsSv:hover {
+color: grey;
+background-color: #d7e9ff;
+}
+.addOnsScan {
+ background-color: #2e8448;
+}
+.text-center.addOnsScanner {
+ padding: 5px;
+}
+    .toggle {
+       position: relative;
+       display: block;
+       width: 100px;
+       height: 40px;
+       padding: 3px;
+       margin: auto;
+       border-radius: 50px;
+       cursor: pointer;
+    }
+    .toggle-input {
+       position: absolute;
+       top: 0;
+       left: 0;
+       opacity: 0;
+    }
+    .toggle-label {
+       position: relative;
+       display: block;
+       height: inherit;
+       font-size: 12px;
+       background: #008a0e;
+       border-radius: inherit;
+       box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 3px
+       rgba(0, 0, 0, 0.15);
+    }
+    .toggle-label:before,
+    .toggle-label:after {
+       position: absolute;
+       top: 50%;
+       color: black;
+       margin-top: -.5em;
+       line-height: 1;
+    }
+    .toggle-label:before {
+       content: attr(data-off);
+       right: 11px;
+       color: #fff;
+       text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+    }
+    .toggle-label:after {
+       content: attr(data-on);
+       left: 11px;
+       color: #fff;
+       text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+       opacity: 0;
+    }
+    .toggle-input:checked~.toggle-label {
+       background: #008a0e;
+    }
+    .toggle-input:checked~.toggle-label:before {
+       opacity: 0;
+    }
+    .toggle-input:checked~.toggle-label:after {
+       opacity: 1;
+    }
+    .toggle-handle {
+       position: absolute;
+       top: 4px;
+       left: 4px;
+       width: 38px;
+       height: 38px;
+       background: linear-gradient(to bottom, #FFFFFF 40%, #f0f0f0);
+       border-radius: 50%;
+    }
+    .toggle-handle:before {
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       margin: -6px 0 0 -6px;
+       width: 16px;
+       height: 16px;
+    }
+    .toggle-input:checked~.toggle-handle {
+       left: 64px;
+       box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
+    }
+/* Transition*/
+.toggle-label,
+.toggle-handle {
+   transition: All 0.3s ease;
+   -webkit-transition: All 0.3s ease;
+   -moz-transition: All 0.3s ease;
+   -o-transition: All 0.3s ease;
+}
+section.addOnToggle {
+   margin-bottom: 15px;
+}     
 
 .row {
   margin-top: 0.5rem;
@@ -732,20 +857,12 @@ div#btnCo {
 }
 input {
   border: 1px solid #ccc;
+  border-radius: 2px;
   padding: 12px;
   width: 100%;
-  width: calc(100% - 30px); 
+  // width: calc(100% - 30px); 
 }
 
-// input {
-// text-align:center;
-// border-radius: 10px;
-// padding: 10px 5px;
-// background-color: #008a0e;
-// color: white !important;
-// max-width: 50%;
-// font-size: var(--large-mobile-font-size);
-// }
 input:not(:focus):invalid {
   color: red;
   outline-color: transparent;

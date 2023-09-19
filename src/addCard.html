@@ -23,31 +23,21 @@
 <script src="main.js"></script>
 </head>
 <style> 
-/* button {
-   background-color: #353a3d;
-   border: 1px solid #353a3d;
-   border-radius: 6px;
-   color: white;
-   cursor: pointer;
-   text-transform: uppercase;
-   padding: 8px;
-} */
-/* .box {
-   width: 65px;
-   height: 60px;
-   background-color: #fff;
-   border: 1px black solid;
-   text-align: center;
-   border-radius: 50%;
-   padding: 8px 5px 5px 1px;
-   margin: auto;
-} */
+input#addCard4 {
+   max-width: 45%;
+   margin-left: 3px;
+}
+input#addCard3 {
+   max-width: 45%;
+   float: left;
+   margin-right: 1px;
+}
 </style>
 <body>
   <div class="container">
 
     <!--    <button type="hidden" id="show">SIGN-UP</button> -->
-    <dialog id="addCard-bckgrd">
+    <dialog open id="addCard-bckgrd">
       <title>Add Credit Card</title>
       <div class="box2">
          <p class="signText">PAYMENT
@@ -82,18 +72,8 @@
  </div>
  </div>
  <script src="/js/progress.js"></script>
-  <script src="/js/dialog.js"></script>
   <script src="/js/save.js"></script>
   <script src="js/main.js"></script>
-<script>
-//   let dialog = document.querySelector("dialog");
-// document.querySelector("#close").onclick = function () {
-//    dialog.close();
-// };
-document.addEventListener("DOMContentLoaded", function () {
-   const dialog = document.getElementById("addCard-bckgrd");
-   dialog.showModal();
-});
-</script>
+
 </body>
 </html>
