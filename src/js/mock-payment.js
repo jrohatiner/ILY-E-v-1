@@ -10,11 +10,11 @@
   ];
 
   let details = {
-     total: { label: "Donation", amount: { currency: "USD", value: "55.00" } },
+     total: { label: "Drive Safely", amount: { currency: "USD", value: "11.00" } },
      displayItems: [
         {
            label: "confirmed!",
-           amount: { currency: "USD", value: "65.00" }
+           amount: { currency: "USD", value: "11.00" }
         },
         {
            label: "Total",

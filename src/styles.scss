@@ -12,7 +12,6 @@ body {
   height: 100vh;
 }
 body#map {
-  // background: transparent;
   margin: 0;
   padding: 0;
   font-family: 'Orbitron', sans-serif;
@@ -79,15 +78,14 @@ ul.front-pg {
 .modal-header {
   border:none;
 }
+/* sign-up and reserve pages styles inside modal */
 
-// sign-up and reserve pages styles inside modal
-
-// progress bar
+/* progress bar */
 .container.progress {
   background: transparent;
   margin-top: 2.5em;
 }
-// license, insurance, addPay
+/* license, insurance, addPay */
 input[type="file"] {
   display: none;
 }
@@ -260,8 +258,7 @@ button {
 #signup-bckgrd {
   background-color: #020209;
   color: white;
-  width: auto;
-  // top: 10%;
+  /* width: auto; */
 }
 #signingUp {
   margin: 30px 25px;
@@ -354,7 +351,6 @@ button:not(:disabled):hover {
   background-image: url("https://assets.codepen.io/460875/tesla-model-3.png");
   background-repeat: no-repeat;
 }
-
 .box.vehicle {
   background-image: url('https://assets.codepen.io/460875/tesla-model-3.png');
   background-repeat: no-repeat;
@@ -385,7 +381,6 @@ button:not(:disabled):hover {
   width: 50%;
   margin-top: 23px;
   margin-bottom: 1em;
-  // margin-left: -40px;
 } 
 p.payS2 {
   font-size: x-small;
@@ -464,7 +459,6 @@ textarea {
   height: 5.5em;
   line-height: 1.4em;
   padding: 12px;
-  // width: 90%;
   width: calc(100% - 30px);
 }
 select {
@@ -499,7 +493,7 @@ section#cc-exp-csc {
 section#cc-exp-csc div:not(:last-child) {
   margin: 0 10px 0 0;
 }
-// vehicle modal
+/* vehicle modal */
 h2.topRes {
   text-align: center;
 }
@@ -557,7 +551,7 @@ span.rightTopText {
 .row.align-items-center.topTextRes {
   margin-top: 10px;
 }
-// end sign-up page styles inside modal
+/* end sign-up page styles inside modal */
 
 ul.front-pg li.frt-pg {
   display:flex;
@@ -586,7 +580,7 @@ a {
   text-decoration: none;
   color: white;
 }
-// loader animation styles
+/* loader animation styles */
 #loader {
   position: absolute;
   left: 50%;
@@ -621,9 +615,9 @@ a {
   from{ bottom:-100px; opacity:0 } 
   to{ bottom:0; opacity:1 }
 }
-// end loader animation styles
+/* end loader animation styles */
 
-//addOns page
+/*a ddOns page */
 td {
   text-align: left;
   text-transform: uppercase;
@@ -735,7 +729,7 @@ background-color: #d7e9ff;
        left: 64px;
        box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
     }
-/* Transition*/
+/* Transition */
 .toggle-label,
 .toggle-handle {
    transition: All 0.3s ease;
@@ -747,7 +741,6 @@ section.addOnToggle {
    margin-bottom: 15px;
 }   
 /* pre check pg */  
-
 #saveButton {
   margin-left: 25px;
   border: none;
@@ -755,8 +748,6 @@ section.addOnToggle {
 #cameraView {
   max-width: 20%;
 }
-
-
 .row {
   margin-top: 0.5rem;
   display: flex;
@@ -868,7 +859,6 @@ input {
   border-radius: 2px;
   padding: 12px;
   width: 100%;
-  // width: calc(100% - 30px); 
 }
 
 input:not(:focus):invalid {
@@ -903,7 +893,7 @@ a.scanTrans {
   background-size: 100% 100%;
   border: none;  
 }
-// bottom menu to be removed
+/* bottom menu to be removed */
 ul.bottomMenu {
 position: relative;
 bottom: 0;
@@ -917,7 +907,7 @@ ul.bottomMenu li {
   display: inline;
   margin-right: 10px;
 }
-// end bottom menu to be removed
+/* end bottom menu to be removed */
 .footText.footRow {
   text-align:center
 }
