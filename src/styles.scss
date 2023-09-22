@@ -27,7 +27,6 @@ dialog#signup-bckgrd {
 dialog#addCard-bckgrd {
   border: none;
 }
-
 p.addPayText {
   margin-bottom: 4.5em;
   text-align: center;
@@ -48,6 +47,9 @@ li.frt-pg {
 }
 .faceScan {
   text-align: center;
+}
+td {
+  color: white;
 }
 img.image.high-quality {
   margin-left: 15px;
@@ -430,11 +432,9 @@ p.payS2 {
   border: 1px black solid;
   text-align: center;
   border-radius: 50%;
-  // padding: 8px 5px 5px 1px;
   margin: auto;
 }
 .box3 {
-  // margin-bottom: 50px;
   text-align: center;
 }
 .lPlus {
@@ -580,8 +580,6 @@ button.btn.btn-primary:hover {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  // width: 30%;
-  // padding: 5px 3px;
   border: 1 px solid #008a0e;
 }
 a {
@@ -747,7 +745,17 @@ background-color: #d7e9ff;
 }
 section.addOnToggle {
    margin-bottom: 15px;
-}     
+}   
+/* pre check pg */  
+
+#saveButton {
+  margin-left: 25px;
+  border: none;
+}
+#cameraView {
+  max-width: 20%;
+}
+
 
 .row {
   margin-top: 0.5rem;
