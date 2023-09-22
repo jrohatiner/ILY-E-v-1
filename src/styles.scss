@@ -261,7 +261,7 @@ button {
   background-color: #020209;
   color: white;
   width: auto;
-  top: 10%;
+  // top: 10%;
 }
 #signingUp {
   margin: 30px 25px;
@@ -1027,7 +1027,6 @@ dialog#addCard-bckgrd {
 p.signText {
   margin-bottom: 0.5em;
   text-align: center;
-  text-wrap: nowrap;
 }
 @media all and (max-width: 578px) {
   .col-span-1,

@@ -13,12 +13,12 @@
      total: { label: "Donation", amount: { currency: "USD", value: "55.00" } },
      displayItems: [
         {
-           label: "Original donation amount",
+           label: "confirmed!",
            amount: { currency: "USD", value: "65.00" }
         },
         {
-           label: "Friends and family discount",
-           amount: { currency: "USD", value: "-10.00" }
+           label: "Total",
+           amount: { currency: "USD", value: "11.00" }
         }
      ]
   };

@@ -1,9 +1,4 @@
-// let dialog = document.querySelector("dialog");
 
-document.addEventListener("DOMContentLoaded", function () {
-   const dialog = document.getElementById("signup-bckgrd");
-   dialog.showModal();
-});
 function myTra() {
    document.getElementById("save").style.background = "#75DD7B";
    document.getElementById("save").style.color = "white";
