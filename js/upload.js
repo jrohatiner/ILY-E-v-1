@@ -70,7 +70,7 @@ function myTra() {
 // progress bar
 let i = 0;
 function move() {
-  if (i == 0) {
+  if (i === 0) {
      i = 1;
      let elem = document.getElementById("proBar");
      let width = 1;
