@@ -1,5 +1,6 @@
 
 // face scan button
+// noinspection JSVoidFunctionReturnValueUsed
 
 const scanButton = document.getElementById("scan-button");
 
@@ -17,6 +18,8 @@ scanButton.addEventListener("click", () => {
 
     // Create a blob from the canvas.
     const blob = canvas.toBlob();
+    console.log(blob);
+
 
     // Upload the blob to a server.
     const xhr = new XMLHttpRequest();

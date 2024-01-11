@@ -10,16 +10,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/4500d8ef13.js" crossorigin="anonymous"></script>
-  <script src="main.js"></script>
+    <link href="style.css">
 </head>
-<style>
-.mb-3.btnLogin {
-    width: 50%;
-    margin: auto;
-    border-radius: 1px;
-}   
-</style>
-
 <body>
   <div class="container">
   <div class="grid-row row center">
@@ -29,7 +21,7 @@
   </div>
   <div class="column middle">
       <ul class="front-pg">
-             <li class="frt-pg"><a href="vehicles.html">vehicles</a></li>
+             <li class="frt-pg"><a href="vehicleModal.html">vehicles</a></li>
              <li class="frt-pg"><a href="energy.html">energy</a></li>
              <li class="frt-pg"><a href="express.html">express</a></li>
            </ul>
@@ -38,14 +30,17 @@
         <form action="vehicleModal.html">
           <div class="text-center">
           <div class="mb-3 btnLogin">
-            <input type="text" class="form-control btn btn-primary" id="username" placeholder="username">
+              <label for="username"></label>
+              <input type="text" class="form-control btn btn-primary" id="username" placeholder="username">
           </div>
           <div class="mb-3 btnLogin">
-            <input type="password" class="form-control btn btn-primary" id="password" placeholder="password">
+              <label for="password">
+
+              </label><input type="password" class="form-control btn btn-primary" id="password" placeholder="password">
           </div>
-          <!-- <div class="mb-3">
+         <div class="mb-3">
             <button type="submit" class="btn btn-primary">Sign in</button>
-          </div> -->
+          </div>
       </div>
         </form>
         <div class="text-center">
