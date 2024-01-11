@@ -1,13 +1,14 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>ILY-e</title>
+    <title>SIGN-UP</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="favicon.ico" type="image/x-icon" />  
-<link rel="apple-touch-icon" href="images/hello-icon-152.png">   
+<link rel="apple-touch-icon" href="images/hello-icon-152.png">
 <meta name="theme-color" content="white"/>  
 <meta name="apple-mobile-web-app-capable" content="yes">  
 <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
@@ -20,44 +21,34 @@
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/4500d8ef13.js" crossorigin="anonymous"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<script src="main.js"></script>
-<meta http-equiv="refresh" content="2; url='/login.html'" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <style>
- p.checked {
-    font-size:xx-small;
-    text-align:center
+dialog#signup-bckgrd {
+    margin: 7%;
+    height: 70vh;
 }
-p.done {
-    font-size:small;
-    text-align:center
-}
-
 </style>
 <body>
 <div class="container" id="signingUp">
 
-<button class="btn btn-primary visually-hidden" id="show">complete</button>
-
-<dialog open id="addCard-bckgrd">
-   <title>3 checks</title>
-   <div class="signupBox">
+<button class="btn btn-primary visually-hidden" id="show">SIGN-UP</button>
+<dialog open id="signup-bckgrd">
+   <div class="box">
       <i class="fa-thin fa-id-card fa-xl" style="color: #183152;margin-top: 15px;"></i><br>
       <i class="fa-thin fa-id-card fa-2xl" style="color: #183152;margin-top: 15px;font-size:34px;"></i>
    </div>
    <div class="box2">
-      <p><button class="license" id="show1"><a href="/license.html">LICENSE</a><i class="fa-solid fa-circle-check fa-xl" style="color: #309873;margin-left:25px;"></i>
-      </button></p>
+      <p><button class="license"><a href="/license.html">LICENSE</a></button></p>
 
-      <p><button class="insure" id="show2"><a href="/insurance.html">INSURANCE</a>
-        <i class="fa-solid fa-circle-check fa-xl" style="color: #309873;margin-left:5px;"></i></button></p>
+      <p><button class="insure"><a href="/insurance.html">INSURANCE</a></button></p>
 
-      <p><button class="addPay" id="show3"><a href="/addPay.html">PAYMENT</a>
-        <i class="fa-solid fa-circle-check fa-xl" style="color: #309873;margin-left:25px;"></i></button></p>
+      <p><button class="addPay"><a href="/addPay.html">PAYMENT</a></button></p>
+    
 
-      <p class="checked">By continuing, I allow ILY-E to save my payment instrument <br>information for future transactions pusrsuant to the Payment Terms for Services </p>
-      <P class="done">YOU ARE BEING REDIRECTED TO THE LOGIN PAGE</P>
+      <p class="signText">for incidentals and add-ons</p>
 
+      <button id="close">Cancel</button>
 </dialog>
 <div class="fixed-bottom">
 <div class="row">
@@ -68,7 +59,6 @@ p.done {
       <li><a href="login.html">login</a></li>
       <li><a href="vehicleModal.html">the real vehicle modal page</a></li>
       <li><a href="sign-up.html">SignUp Modal</a></li>
-      <li><a href="sign-up-checked.html">3 circle checks</a></li>
       <li><a href="energy.html">energy</a></li>
       <li><a href="express.html">express</a></li>
       <li><a href="info.html">info</a></li>
@@ -83,12 +73,5 @@ p.done {
 </div>
   <script src="/js/progress.js"></script>
   <script src="js/main.js"></script>
-  <script src="/js/save.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  var modal = new Modal(document.getElementById('signup-bckgrd'));
-  modal.show();
-});
- </script>
 </body>
 </html>

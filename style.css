@@ -1,0 +1,1092 @@
+
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-image: url("https://assets.codepen.io/460875/main-bkgrd.png");
+    background-repeat: no-repeat;
+    background-color: #288d64;
+    background-size:cover;
+    min-width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+}
+body#map {
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+    background-image: url('https://assets.codepen.io/460875/Map2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+dialog#signup-bckgrd {
+    min-width: 50%;
+    margin: 3%;
+    border: none;
+}
+dialog#addCard-bckgrd {
+    border: none;
+    max-width: 45%;
+    float: left;
+    margin-right: 1px;
+}
+p.addPayText {
+    margin-bottom: 4.5em;
+    text-align: center;
+    text-wrap: nowrap;
+    text-transform: uppercase;
+}
+h1.VehiclesLoading {
+    text-align: center;
+    padding: 30px;
+}
+li.frt-pg {
+    color: green;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+.d-flex {
+    margin-top: 4.25em;
+}
+.faceScan {
+    text-align: center;
+}
+td {
+    color: white;
+}
+img.image.high-quality {
+    margin-left: 15px;
+}
+.row.topRow {
+    display: -webkit-flex;
+    display: flex;
+}
+.column.side {
+    flex: 20%;
+}
+/* right column */
+.column.middle {
+    flex: 20%;
+}
+.image.high-quality.logo {
+    float:right;
+}
+ul.front-pg {
+    margin-left: -40px;
+    margin-top: 6px;
+}
+
+#vehicleDisplayModal {
+    visibility: visible !important;
+}
+.modal-header {
+    border:none;
+}
+/* sign-up and reserve pages styles inside modal */
+
+/* progress bar */
+.container.progress {
+    background: transparent;
+    margin-top: 2.5em;
+}
+/* license, insurance, addPay */
+input[type="file"] {
+    display: none;
+}
+#preview {
+    margin-bottom: 10px;
+}
+button.upIm {
+    border: none;
+    background-color:#020209;
+}
+input[type="file"] {
+    display: none;
+}
+#preview {
+    margin-bottom: 10px;
+}
+#upIm {
+    border: none;
+}
+#preview img {
+    max-width: 75%;
+}
+/* the custom button on insurance pg */
+.custom-upload-button {
+    background-color: transparent;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+/* end custom button on insurance pg */
+.topText {
+    text-align: center;
+}
+.lPlus {
+    margin-top: 12px;
+    float: right;
+}
+.signText {
+    text-align: center;
+    font-size: small;
+}
+#close {
+    text-decoration: none;
+    color: white;
+    background-color: #353a3d;
+    border: 1px solid #353a3d;
+    border-radius: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 8px;
+}
+#close a:hover {
+    text-decoration: none;
+}
+.license {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    width: 100%;
+}
+.license a {
+    text-decoration: none;
+    color: white;
+}
+.license a:hover {
+    text-decoration: none;
+    color: #0f3621;
+}
+#next {
+    float: right;
+    text-decoration: none;
+    color: white;
+    background-color: #353a3d;
+    border: 1px solid #353a3d;
+    border-radius: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 10px;
+}
+#next a {
+    border-radius: 2px;
+    text-transform: uppercase;
+}
+#next a:hover {
+    text-decoration: none;
+    padding: 10px;
+}
+.row.addPay {
+    margin: 10px;
+}
+button .btn-lice {
+    background-color: #353a3d;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-weight: 400;
+    margin: 10px 0 0 0;
+    padding: 10px;
+}
+button.btn.btn-primary.licenseSv {
+    min-width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 2px solid gray;
+    padding: 7px 10px;
+    font-family: "Orbitron", sans-serif;
+    font-size: 18px;
+    transition: 0.3s;
+    height: 43px;
+    border-radius: 4px;
+    background-color: #0f3421;
+}
+button.btn.btn-primary.licenseSv:hover {
+    color: grey;
+    background-color: #d7e9ff;
+}
+button.btn.btn-primary.insureSv {
+    min-width: 100%;
+    font-family: "Orbitron", sans-serif;
+    font-size: 18px;
+    transition: 0.3s;
+    height: 43px;
+    border-radius: 4px;
+    background-color: #0f3421;
+}
+button {
+    background-color: #353a3d;
+    border: 1px solid #353a3d;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 8px;
+}
+.license,
+.insure,
+.addPay {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    width: 100%;
+}
+.addPay a {
+    text-decoration: none;
+    color: white;
+}
+.insure a {
+    text-decoration: none;
+    color: white;
+}
+.license a {
+    text-decoration: none;
+    color: white;
+}
+.addPay a:hover {
+    text-decoration: none;
+    color: #0f3621;
+}
+.insure a:hover {
+    text-decoration: none;
+    color: #0f3621;
+}
+.license a:hover {
+    text-decoration: none;
+    color: #0f3621;
+}
+/* dialog background */
+#signup-bckgrd {
+    background-color: #020209;
+    color: white;
+    /* width: auto; */
+}
+#signingUp {
+    margin: 30px 25px;
+}
+.resCo {
+    float: left;
+}
+.col.resCo {
+    text-align: left;
+    margin-left:50px;
+    margin-bottom: -60px;
+}
+.button2#saved {
+    top: 0;
+}
+#saved {
+    background: transparent;
+    border-radius: 50%;
+    padding: 10px;
+}
+.button2 {
+    border: none;
+    background: transparent;
+    color: green;
+    width: 35px;
+    height: 40px;
+    padding: 11px;
+    margin-top: 25px;
+}
+.image.picRes#tesla {
+    width: 220px;
+    height: 100px;
+}
+button.btn.btn-primary.reserve {
+    width: 100%;
+    text-transform: uppercase;
+    border-radius: 2px;
+    background-color: #353a3d;
+    border-color: #4c535d;
+    padding: 5px 3px;
+    margin: 10px 0 0 0;
+}
+button.btn.btn-primary.reserve a {
+    text-decoration: none;
+}
+button.btn.btn-primary.reserve a:hover {
+    text-decoration: none;
+    color: grey;
+}
+button#save {
+    border: 2px solid gray;
+    padding: 7px 10px;
+    font-family: "Orbitron", sans-serif;
+    font-size: 18px;
+    transition: 0.3s;
+    height: 43px;
+    border-radius: 2px;
+    background-color: #0f3421;
+    margin: auto;
+}
+button#save:hover {
+    color: grey;
+    background-color: #d7e9ff;
+}
+input#username,
+input#password {
+    background-color: #008a0e;
+    color: white!important;
+}
+button#sUp {
+    margin-left: 90px;
+    margin-top: 4rem;
+    background-color: transparent;
+}
+button:disabled {
+    color: #888;
+    cursor: default;
+}
+button:not(:disabled):hover {
+    background-color: #0f3320;
+    color: white;
+}
+#sUp {
+    width: 40%;
+    color:black;
+    font-weight: bolder;
+    text-decoration: none;
+}
+.box5 {
+    background-image: url("https://assets.codepen.io/460875/tesla-model-3.png");
+    background-repeat: no-repeat;
+}
+.box.vehicle {
+    background-image: url('https://assets.codepen.io/460875/tesla-model-3.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom right;
+}
+.box.addCard {
+    width: 65px;
+    height: 60px;
+    background-color: #fff;
+    border: 1px black solid;
+    text-align: center;
+    border-radius: 50%;
+    padding: 8px 5px 5px 1px;
+    margin: auto;
+}
+.box2 {
+    padding: 10%;
+    align-items: center;
+}
+.col-leftCk {
+    float: left;
+    width: 50%;
+    margin-top: 20px;
+}
+.col-rgtLab {
+    float: left;
+    width: 50%;
+    margin-top: 23px;
+    margin-bottom: 1em;
+}
+p.payS2 {
+    font-size: x-small;
+    text-align: justify;
+}
+.col-leftAdd {
+    margin-left: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+.signupBox {
+    width: 65px;
+    height: 60px;
+    background-color: #fff;
+    border: 1px black solid;
+    text-align: center;
+    border-radius: 50%;
+    padding: 8px 5px 5px 1px;
+    margin: auto;
+}
+.licensebox {
+    width: 74px;
+    height: 78px;
+    background-color: #fff;
+    border: 1px black solid;
+    text-align: center;
+    border-radius: 50%;
+    padding: 8px 0px 5px 0px;
+    margin: auto;
+}
+.rLice {
+    margin-top: 10px;
+}
+#car{
+    margin-top: 3em;
+}
+.box {
+    width: 65px;
+    height: 65px;
+    background-color: #fff;
+    border: 1px black solid;
+    text-align: center;
+    border-radius: 50%;
+    margin: auto;
+}
+.box3 {
+    text-align: center;
+}
+.iPlus {
+    margin-top: 12px;
+}
+input#postal-code {
+    width: 100%;
+}
+#postal-code {
+    min-width: 100%;
+    border-radius: 1px;
+    border: 2px solid #020209;
+    background-color: white;
+    text-align: left;
+    color: black;
+}
+input[type="text-area"] {
+    box-sizing: border-box;
+}
+textarea {
+    border: 1px solid #ccc;
+    font-size: var(--small-mobile-font-size);
+    height: 5.5em;
+    line-height: 1.4em;
+    padding: 12px;
+    width: calc(100% - 30px);
+}
+select {
+    background-color: white;
+    border: 1px solid #ccc;
+    display: inline-block;
+    font-size: var(--mobile-font-size);
+    padding: 12px 12px 12px 11px;
+    width: 100%;
+}
+form section {
+    margin: 0 0 17px 0;
+    position: relative;
+}
+form section:last-of-type {
+    margin: 0 0 25px 0;
+}
+label {
+    display: block;
+    font-weight: inherit;
+    text-wrap: nowrap;
+    font-size: 0.675em;
+    margin: 0 0 1px 0;
+}
+div#exp-month-year {
+    width: 50%;
+}
+section#cc-exp-csc {
+    display: flex;
+    justify-content: space-between;
+}
+section#cc-exp-csc div:not(:last-child) {
+    margin: 0 10px 0 0;
+}
+/* vehicle modal */
+h2.topRes {
+    text-align: center;
+}
+h4.headReserv {
+    text-align: center;
+}
+.row.resTes {
+    margin-top: 0;
+}
+p.vRangeVrate {
+    line-height: 1;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    text-wrap: nowrap;
+}
+.col.alignRes {
+    color: white;
+    text-wrap: nowrap;
+}
+span.vMod {
+    color: #12691b;
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-wrap: nowrap;
+    text-align: center;
+}
+span.vMod1 {
+    color: #12691b;
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-wrap: nowrap;
+    text-align: center;
+}
+span.rightTopText {
+    color: #12691b;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-wrap: nowrap;
+    text-align: center;
+    font-size: x-small;
+    float: right;
+    line-height: 3;
+    margin-top: 15px;
+    margin-right: -20px;
+}
+.smTopText {
+    font-size: x-small;
+    float: left;
+    line-height: 1;
+}
+.gap-3.topTextVM {
+    float: left;
+}
+.row.align-items-center.topTextRes {
+    margin-top: 10px;
+}
+/* end sign-up page styles inside modal */
+
+ul.front-pg li.frt-pg {
+    display:flex;
+    flex-flow: nowrap;
+}
+li.frt-pg {
+    display:flex;
+    flex-flow: nowrap;
+}
+button.btn.btn-primary {
+    background-color: #008a0e;
+    width: 60%;
+    padding: 5px 3px;
+    border-radius: 10px;
+    border: 1px solid #008a0e;
+}
+button.btn.btn-primary:hover {
+    background-color: #008a0e;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid #008a0e;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+/* loader animation styles */
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    margin: -76px 0 0 -76px;
+    border-radius: 50%;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* Add animation to "page content" */
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+@-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 }
+    to { bottom:0px; opacity:1 }
+}
+@keyframes animatebottom {
+    from{ bottom:-100px; opacity:0 }
+    to{ bottom:0; opacity:1 }
+}
+/* end loader animation styles */
+
+/*a ddOns page */
+td {
+    text-align: left;
+    text-transform: uppercase;
+}
+span.addMod {
+    color: #fcce15;
+}
+.ao {
+    padding: 5px 10px;
+    margin: 20px;
+}
+button.btn.btn-primary.addOnsSv {
+    min-width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 2px solid gray;
+    padding: 7px 10px;
+    font-family: "Orbitron", sans-serif;
+    font-size: 18px;
+    transition: 0.3s;
+    height: 43px;
+    border-radius: 4px;
+    background-color: #0f3421;
+}
+button.btn.btn-primary.addOnsSv:hover {
+    color: grey;
+    background-color: #d7e9ff;
+}
+.addOnsScan {
+    background-color: #2e8448;
+}
+.text-center.addOnsScanner {
+    padding: 5px;
+}
+.toggle {
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 40px;
+    padding: 3px;
+    margin: auto;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.toggle-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+.toggle-label {
+    position: relative;
+    display: block;
+    height: inherit;
+    font-size: 12px;
+    background: #008a0e;
+    border-radius: inherit;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 3px
+    rgba(0, 0, 0, 0.15);
+}
+.toggle-label:before,
+.toggle-label:after {
+    position: absolute;
+    top: 50%;
+    color: black;
+    margin-top: -.5em;
+    line-height: 1;
+}
+.toggle-label:before {
+    content: attr(data-off);
+    right: 11px;
+    color: #fff;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+}
+.toggle-label:after {
+    content: attr(data-on);
+    left: 11px;
+    color: #fff;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+}
+.toggle-input:checked~.toggle-label {
+    background: #008a0e;
+}
+.toggle-input:checked~.toggle-label:before {
+    opacity: 0;
+}
+.toggle-input:checked~.toggle-label:after {
+    opacity: 1;
+}
+.toggle-handle {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 38px;
+    height: 38px;
+    background: linear-gradient(to bottom, #FFFFFF 40%, #f0f0f0);
+    border-radius: 50%;
+}
+.toggle-handle:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -6px 0 0 -6px;
+    width: 16px;
+    height: 16px;
+}
+.toggle-input:checked~.toggle-handle {
+    left: 64px;
+    box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+/* Transition */
+.toggle-label,
+.toggle-handle {
+    transition: All 0.3s ease;
+    -webkit-transition: All 0.3s ease;
+    -moz-transition: All 0.3s ease;
+    -o-transition: All 0.3s ease;
+}
+section.addOnToggle {
+    margin-bottom: 15px;
+}
+/* pre check pg */
+#saveButton {
+    margin-left: 25px;
+    border: none;
+}
+#cameraView {
+    max-width: 20%;
+}
+.row {
+    /*margin-top: 0.5rem;*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+.col {
+    flex: 1 1 8%;
+    margin: 0 0 0.5rem 0;
+    padding: 0.5em;
+    box-sizing: border-box;
+    background-clip: content-box;
+}
+/* nested grids */
+.row .row,
+.row.nested {
+    flex: 1 1 auto;
+    margin-top: -0.5em;
+}
+/* full width grids */
+.row.wide-fit {
+    margin: -10px;
+    padding: 5px 10px 5px;
+}
+/* Clear floats after the columns */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* center grids */
+.row.center {
+    justify-content: center;
+}
+.center .col {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+/* columns widths */
+.col-span-1 {
+    flex-basis: 8.3333%;
+}
+.col-span-2 {
+    flex-basis: 16.6666%;
+}
+.col-span-3 {
+    flex-basis: 25%;
+}
+.col-span-4 {
+    flex-basis: 33.3333%;
+    text-align:center;
+}
+.col-span-5 {
+    flex-basis: 41.6666%;
+}
+.col-span-6 {
+    flex-basis: 50%;
+    padding: 5px;
+}
+.col-span-7 {
+    flex-basis: 58.3333%;
+}
+.col-span-8 {
+    flex-basis: 100%;
+    text-align: center;
+}
+.col-span-9 {
+    flex-basis: 75%;
+}
+.col-span-10 {
+    flex-basis: 83.3333%;
+}
+.col-span-11 {
+    flex-basis: 91.6666%;
+}
+.col-span-12 {
+    flex-basis: 100%;
+}
+.fixed-width {
+    flex: 0 0 500px;
+    background-color: rgba(255, 0, 0, 0.1) !important;
+}
+
+h2.gettinVees {
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    text-align: center;
+}
+.frt-pg a {
+    color:#008a0e;
+}
+.frt-pg a:hover {
+    color:white;
+}
+p.footText {
+    font-size: .625em;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+div#btnCo {
+    margin-bottom: 3rem;
+}
+input {
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    padding: 12px;
+    width: 100%;
+}
+
+input:not(:focus):invalid {
+    color: red;
+    outline-color: transparent;
+}
+.mTop {
+    margin-top: 10px;
+}
+.mTop.scanner {
+    margin-top: 10px;
+}
+button.btn.btn-primary.mTop.scanner {
+    margin-bottom: 10px;
+}
+a.scanTrans {
+    color:green;
+    font-weight: extra-bold;
+}
+#ilyeMod {
+    color: black;
+}
+#modalBtn{
+    margin-left: 155px;
+}
+.fScan.span {
+    text-align: center;
+}
+.fScan.scanTrans{
+    background-image: url("https://assets.codepen.io/460875/main-bkgrd.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border: none;
+}
+/* bottom menu to be removed */
+ul.bottomMenu {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: small ;
+    word-break: keep-all;
+    display:inline;
+    margin-right: 15px;
+}
+ul.bottomMenu li {
+    display: inline;
+    margin-right: 10px;
+}
+/* end bottom menu to be removed */
+.footText.footRow {
+    text-align:center
+}
+a.footLinks {
+    color: #008a0e;
+}
+a.footLinks:hover {
+    color: white;
+}
+li a {
+    color: white;
+}
+li a:hover {
+    color: #008a0e;
+}
+p.park {
+    color: white;
+}
+.infoBox {
+    background-color:rgb(109, 120, 138);
+    width: 400px;
+    height: 200px;
+    margin: auto;
+    color:white;
+    border-radius: 6px;
+    padding: 15px 5px 1px ;
+}
+p.footText.footRow {
+    padding: 25px;
+}
+/*insurance page */
+.row.align-items-center {
+    margin-top: -5px;
+}
+.addPayProgress.insureCard {
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+}
+img#uploadedImage {
+    max-width: 250px!important;
+    max-height: 175px!important;
+}
+/* progress bar */
+.container.progress {
+    margin-bottom: 5%;
+    font-size: 0.675em;
+    border-radius: 2px;
+    background-color: #ddd;
+}
+.addPayProgress.progress {
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+/* addCard */
+input#addCard4 {
+    max-width: 45%;
+    margin-left: 3px;
+}
+input#addCard3 {
+    max-width: 45%;
+    float: left;
+    margin-right: 19px;
+    /*margin-right: 1px;*/
+}
+#addCard3 {
+    margin-right: 30px;
+}
+.dLicense {
+    width: 33%;
+    background-color: #0f3320;
+}
+.insurCard {
+    width: 66%;
+    background-color: #0f3320;
+}
+.payAdd {
+    width: 100%;
+    background-color: #0f3320;
+}
+/* dialog background */
+
+#addCard-bckgrd {
+    font-family: "Orbitron", sans-serif;
+    background-color: #020209;
+    color: white;
+    padding: 10px;
+    width: auto;
+    max-width: 50%;
+    top: 10%;
+}
+/*dialog#addCard-bckgrd {*/
+/*    width: 50%;*/
+/*}*/
+p.signText {
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+/*privacy page*/
+.prive {
+    background-color: #fff;
+    margin-top: 4rem;
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+h1.pp {
+    text-align: center;
+}
+h2.private {
+    text-transform: uppercase;
+}
+.mb-3.btnLogin {
+    width: 50%;
+    margin: auto;
+    border-radius: 1px;
+}
+p.checked {
+    font-size:xx-small;
+    text-align:center
+}
+p.done {
+    font-size:small;
+    text-align:center
+}
+/*begin median queries*/
+@media all and (max-width: 578px) {
+    .col-span-1,
+    .col-span-2,
+    .col-span-3,
+    .col-span-4,
+    .col-span-5 {
+        flex-basis: 50%;
+    }
+    .col-span-6,
+    .col-span-7,
+    .col-span-8,
+    .col-span-9,
+    .col-span-10,
+    .col-span-11 {
+        flex-basis: 100%;
+    }
+    .nested .col {
+        flex-basis: 100%;
+    }
+}
+@media (max-width: 600px) {
+    .row {
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        flex: 50%;
+    }
+}
+/* fallbacks */
+@media (min-width: 400px) {
+    button {
+        font-size: var(--large-mobile-font-size);
+    }
+    input {
+        font-size: var(--large-mobile-font-size);
+    }
+    label {
+        font-size: var(--large-mobile-font-size);
+    }
+    p {
+        font-size: inherit;
+        font-weight: 400;
+        line-height: 1.5em;
+    }
+    form section {
+        margin: 0 0 10px 0;
+        position: relative;
+    }
+    form section:last-of-type {
+        margin: 0 0 30px 0;
+    }
+    select {
+        font-size: var(--large-mobile-font-size);
+    }
+    textarea {
+        font-size: var(--large-mobile-font-size);
+    }
+}

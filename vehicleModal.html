@@ -2,16 +2,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   <title>Vehicle Modal</title>
 <script src="https://kit.fontawesome.com/4500d8ef13.js" crossorigin="anonymous"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<script src="main.js"></script>
+   <link rel="stylesheet" href="style.css">
 </head>
-<style>
-   dialog#signup-bckgrd {
-   min-width: 50%;
-   margin: 3%;
-}
-</style>
 <body id="map">
 <div class="container" id="signingUp">
    <button class="visually-hidden btn-lice" id="show">SIGN-UP</button>
@@ -24,7 +19,6 @@
    </button>
 
    <dialog open id="signup-bckgrd">
-      <title>Vehicles</title>
       <div class="row row-cols-4">
          <div class="col-4">
             <p class="gap-3 topTextVM">
@@ -35,7 +29,7 @@
          <div class="col-4">
             <span class="close"><i class="fa-solid fa-xmark" style="color: #ffffff;float:right;"></i></span>
             <span class="rightTopText">.01 miles away</span>
-            </p>
+<!--            </p>-->
          </div>
       </div>
 
@@ -55,13 +49,13 @@
          <div class="row center">
             <div class="col-8 align-self-center">
                First 2 hours <span class="vMod">free</span>
-               <button class="btn btn-primary reserve"id="buyButton">RESERVE
+               <button class="btn btn-primary reserve" id="buyButton">RESERVE
                 
                </button>
                <h4 class="headReserv">DAILY RENTAL</h4>
                <span class="vMod1">24 HOURS | UNLIMITED MILES</span>
                <div id="btnCo">
-                   <button class="btn btn-primary reserve"id=""> <a href="addOns.html" style="color:white;">Select Add Ons</a></button>
+                   <button class="btn btn-primary reserve" id=""> <a href="addOns.html" style="color:white;">Select Add Ons</a></button>
                </div>
             </div>
             
