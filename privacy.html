@@ -17,6 +17,10 @@
     padding: 50px 30px;
     margin: 4em;
   }
+  #dprive {
+    line-height: 10%;
+    margin-bottom: 3rem;
+  }
 </style>
 <body>
 <div class="priv-container">
@@ -40,8 +44,8 @@
   <section>
     <h1 class="pp">Privacy policy</h1>
   <p>
- 
-  <p>Last revised: March 27, 2023</p>
+ <p>Last revised:</p>
+  <p id="dprive"></p>
     <p>
   This Inc. and its subsidiaries (collectively, “this”, “we”, or “us”) care about privacy and want you
    to be familiar with how we collect, use, process, and disclose your personal information. This
@@ -212,7 +216,10 @@
 </section>
 </div>
 </div>
-<!--</div>-->
+<script>
+  const d = new Date();
+  document.getElementById("dprive").innerHTML = d.toDateString();
+</script>
 </body>
 </html>
 
